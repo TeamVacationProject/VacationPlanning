@@ -13,6 +13,9 @@ public class MainFilter implements Filter {
     */
 
 
+/*
+Привет мир
+*/
     public void init(FilterConfig config) throws ServletException {
     }
 
