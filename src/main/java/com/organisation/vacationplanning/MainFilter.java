@@ -26,6 +26,9 @@ public class MainFilter implements Filter {
     private ITemplateEngine templateEngine;
     private JakartaServletWebApplication application;
 
+/*
+Привет мир
+*/
     public void init(FilterConfig config) throws ServletException {
         this.application =
                 JakartaServletWebApplication.buildApplication(config.getServletContext());
