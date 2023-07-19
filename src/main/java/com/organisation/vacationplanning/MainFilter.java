@@ -18,7 +18,7 @@ import org.thymeleaf.web.servlet.JakartaServletWebApplication;
 import java.io.IOException;
 import java.io.Writer;
 
-@WebFilter(filterName = "MainFilter")
+@WebFilter(urlPatterns = "/*")
 public class MainFilter implements Filter {
     /*
     Здесь будет настройка Thymeleaf и создание ControllerMappings
