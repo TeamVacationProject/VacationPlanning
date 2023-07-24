@@ -1,0 +1,981 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  font-size: 100%;
+  height: 100%;
+  width: 100%;
+  color: black;
+}
+.DivBody {
+  z-index: 0;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+.semiopacity {
+  background: rgba(000, 000, 000, 0, 5); /*  фон */
+  filter: alpha(Opacity=0, 5); /* Прозрачность в IE */
+  color: #fff; /* Цвет текста */
+  z-index: 1;
+  /*top: -31px;*/
+  /*background-attachment: scroll;
+	display: inline-block;*/
+}
+/*===================Меню==================== */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border-collapse: collapse;
+}
+header {
+  position: relative;
+  width: 100%;
+}
+.logo {
+  position: relative;
+  z-index: 123;
+  padding: 4px;
+  font: 10px verdana;
+  float: left;
+  width: 250px;
+  text-align: center;
+}
+.logo a {}
+#logo {
+  font-size: 18px
+}
+.log3 {
+  position: relative;
+  padding: 10px;
+  font: 18px verdana;
+  float: right;
+  width: 11%;
+  z-index: 400;
+}
+.log3 a {
+  color: #ff9218;
+}
+nav {
+  position: relative;
+  width: 99, 9%;
+  margin: 0 auto;
+}
+#cssmenu, #cssmenu ul, #cssmenu ul li, #cssmenu ul li a, #cssmenu #head-mobile {
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 50;
+}
+#cssmenu:after, #cssmenu > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0
+}
+#cssmenu #head-mobile {
+  display: none
+}
+#cssmenu {
+  background: #414042;
+}
+#cssmenu > ul > li {
+  float: left
+}
+#cssmenu > ul > li > a {
+  padding: 17px;
+  font-size: 19px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #ddd;
+  /*font-weight: 700;*/
+}
+#cssmenu > ul > li:hover > a, #cssmenu ul li.active a {
+  color: #fff;
+}
+#cssmenu > ul > li:hover, #cssmenu ul li.active:hover, #cssmenu ul li.active, #cssmenu ul li.has-sub.active:hover {
+  background: #F15D48 !important;
+  -webkit-transition: background .3s ease;
+  -ms-transition: background .3s ease;
+  transition: background .3s ease;
+}
+#cssmenu > ul > li.has-sub > a {
+  padding-right: 30px;
+  height: 57px;
+}
+#cssmenu > ul > li.has-sub > a:after {
+  position: absolute;
+  top: 22px;
+  right: 11px;
+  width: 8px;
+  height: 2px;
+  display: block;
+  background: #ddd;
+  content: ''
+}
+#cssmenu > ul > li.has-sub > a:before {
+  position: absolute;
+  top: 19px;
+  right: 14px;
+  display: block;
+  width: 2px;
+  height: 8px;
+  background: #ddd;
+  content: '';
+  -webkit-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  transition: all .25s ease
+}
+#cssmenu > ul > li.has-sub:hover > a:before {
+  top: 23px;
+  height: 0
+}
+#cssmenu ul ul {
+  position: absolute;
+  left: -9999px;
+  z-index: 300;
+}
+#cssmenu ul ul li {
+  height: 0;
+  -webkit-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  background: #333;
+  transition: all .25s ease
+}
+#cssmenu ul ul li:hover {
+  background: #F15D48;
+}
+#cssmenu li:hover > ul {
+  left: auto
+}
+#cssmenu li:hover > ul > li {
+  height: 100%
+}
+#cssmenu ul ul ul {
+  margin-left: 100%;
+  top: 0
+}
+#cssmenu ul ul li a {
+  border-bottom: 1px solid rgba(150, 150, 150, 0.15);
+  padding: 11px 15px;
+  width: 170px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #ddd;
+  font-weight: 400;
+  z-index: 100;
+}
+#cssmenu ul ul li:last-child > a, #cssmenu ul ul li.last-item > a {
+  border-bottom: 0
+}
+#cssmenu ul ul li:hover > a, #cssmenu ul ul li a:hover {
+  color: #fff;
+  background: #F15D48;
+}
+#cssmenu ul ul li.has-sub > a:after {
+  position: absolute;
+  top: 16px;
+  right: 11px;
+  width: 8px;
+  height: 2px;
+  display: block;
+  background: #ddd;
+  content: ''
+}
+#cssmenu ul ul li.has-sub > a:before {
+  position: absolute;
+  top: 13px;
+  right: 14px;
+  display: block;
+  width: 2px;
+  height: 8px;
+  background: #ddd;
+  content: '';
+  -webkit-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  transition: all .25s ease
+}
+#cssmenu ul ul > li.has-sub:hover > a:before {
+  top: 17px;
+  height: 0
+}
+#cssmenu ul ul li.has-sub:hover, #cssmenu ul li.has-sub ul li.has-sub ul li:hover {
+  background: #363636;
+}
+#cssmenu ul ul ul li.active a {
+  border-left: 1px solid #333
+}
+#cssmenu > ul > li.has-sub > ul > li.active > a, #cssmenu > ul ul > li.has-sub > ul > li.active > a {
+  border-top: 1px solid #333
+}
+@media screen and (max-width:1600px) {
+	.logo{
+		display:none;
+	}
+}
+@media screen and (max-width:1510px) {
+  .logo1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 46px;
+    text-align: center;
+    padding: 10px 0 0 0;
+    float: none
+  }
+  .log3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 46px;
+    text-align: center;
+    padding: 10px 0 0 0;
+    float: none
+  }
+  .logo2 {
+    display: none
+  }
+  nav {
+    width: 100%;
+  }
+  #cssmenu {
+    width: 100%
+  }
+  #cssmenu ul {
+    width: 100%;
+    display: none
+  }
+  #cssmenu ul li {
+    width: 100%;
+    border-top: 1px solid #444
+  }
+  #cssmenu ul li:hover {
+    background: #363636;
+  }
+  #cssmenu ul ul li, #cssmenu li:hover > ul > li {
+    height: auto
+  }
+  #cssmenu ul li a, #cssmenu ul ul li a {
+    width: 100%;
+    border-bottom: 0
+  }
+  #cssmenu > ul > li {
+    float: none
+  }
+  #cssmenu ul ul li a {
+    padding-left: 25px
+  }
+  #cssmenu ul ul li {
+    background: #333 !important;
+  }
+  #cssmenu ul ul li:hover {
+    background: #363636 !important
+  }
+  #cssmenu ul ul ul li a {
+    padding-left: 35px
+  }
+  #cssmenu ul ul li a {
+    color: #ddd;
+    background: none
+  }
+  #cssmenu ul ul li:hover > a, #cssmenu ul ul li.active > a {
+    color: #fff
+  }
+  #cssmenu ul ul, #cssmenu ul ul ul {
+    position: relative;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    text-align: left
+  }
+  #cssmenu > ul > li.has-sub > a:after, #cssmenu > ul > li.has-sub > a:before, #cssmenu ul ul > li.has-sub > a:after, #cssmenu ul ul > li.has-sub > a:before {
+    display: none
+  }
+  #cssmenu #head-mobile {
+    display: block;
+    padding: 23px;
+    color: #ddd;
+    font-size: 12px;
+    font-weight: 700
+  }
+  .button {
+    width: 55px;
+    height: 46px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    z-index: 12399994;
+  }
+  .button:after {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    display: block;
+    height: 4px;
+    width: 20px;
+    border-top: 2px solid #dddddd;
+    border-bottom: 2px solid #dddddd;
+    content: ''
+  }
+  .button:before {
+    -webkit-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    display: block;
+    height: 2px;
+    width: 20px;
+    background: #ddd;
+    content: ''
+  }
+  .button.menu-opened:after {
+    -webkit-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+    top: 23px;
+    border: 0;
+    height: 2px;
+    width: 19px;
+    background: #fff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg)
+  }
+  .button.menu-opened:before {
+    top: 23px;
+    background: #fff;
+    width: 19px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+  }
+  #cssmenu .submenu-button {
+    position: absolute;
+    z-index: 99;
+    right: 0;
+    top: 0;
+    display: block;
+    border-left: 1px solid #444;
+    height: 46px;
+    width: 46px;
+    cursor: pointer
+  }
+  #cssmenu .submenu-button.submenu-opened {
+    background: #262626
+  }
+  #cssmenu ul ul .submenu-button {
+    height: 34px;
+    width: 34px
+  }
+  #cssmenu .submenu-button:after {
+    position: absolute;
+    top: 22px;
+    right: 19px;
+    width: 8px;
+    height: 2px;
+    display: block;
+    background: #ddd;
+    content: ''
+  }
+  #cssmenu ul ul .submenu-button:after {
+    top: 15px;
+    right: 13px
+  }
+  #cssmenu .submenu-button.submenu-opened:after {
+    background: #fff
+  }
+  #cssmenu .submenu-button:before {
+    position: absolute;
+    top: 19px;
+    right: 22px;
+    display: block;
+    width: 2px;
+    height: 8px;
+    background: #ddd;
+    content: ''
+  }
+  #cssmenu ul ul .submenu-button:before {
+    top: 12px;
+    right: 16px
+  }
+  #cssmenu .submenu-button.submenu-opened:before {
+    display: none
+  }
+  #cssmenu ul ul ul li.active a {
+    border-left: none
+  }
+  #cssmenu > ul > li.has-sub > ul > li.active > a, #cssmenu > ul ul > li.has-sub > ul > li.active > a {
+    border-top: none
+  }
+}
+.subDownload {
+  font-size: 80%;
+}
+/*===============endМеню===============*/
+.tdContent {
+  background: white;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  text-align: center;
+}
+#DivContent {
+  box-sizing: border-box;
+  overflow-x: auto;
+  overflow-y: auto; /* прокрутка по вертикали */
+}
+.content-table {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+#IMG_CONTENT {
+  z-index: 3;
+  opacity: 1;
+}
+.kontent {
+  color: black;
+  display: inline-block;
+}
+details {
+  border: 1px solid #999;
+  border-radius: 5px;
+  margin: 0 2em .4em 2em;
+  padding: 1.04%;
+}
+details {
+  margin: 1em;
+  cursor: pointer;
+}
+summary {
+  border-radius: 3px;
+  cursor: pointer;
+  background: -webkit-linear-gradient(top, #f3f3f3 50%, #e6e6e6 50%);
+}
+a {
+  color: black; /* Цвет текста */
+  font-size: 25px; /* Цвет текста */
+  text-decoration: none;
+}
+.btn-link {
+  color: black;
+  font-size: 25px; /* Цвет текста */
+  text-decoration: none;
+}
+.btn-link-menu {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  vertical-align: middle;
+}
+#child {
+  background: #eee;
+  border: 1px solid #ccc;
+  /*padding: 10px;*/
+  float: left;
+  width: 23.5%;
+  margin-right: 2px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.child:last-child {
+  margin-right: 0;
+}
+.Content {
+  color: black;
+}
+.content {
+  color: black;
+}
+.InlineInput {
+  float: left;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+/*======TimeManagment=========*/
+.spacerTime {
+  width: 99vw;
+}
+.containerTime {
+  margin: 2vw 2vw;
+  margin: auto;
+  width: 95vw;
+  overflow-x: auto;
+}
+.lable-for-input {
+  margin: 5px 25px 10px 5px;
+  display: inline;
+}
+.form-control {
+  /*display: block;*/
+  width: 30%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: rgb(241, 93, 72);
+  background-image: none;
+  border: 1px solid rgba(241, 93, 72, 0.7);
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0 1px 1px rgba(241, 93, 72, .075);
+}
+/*Оформление таблицы с бщей статистикой История посещений */
+.PublStatTable {
+  margin-left: 3%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  height: auto;
+  text-alighn: center;
+}
+table.PublStatTable {
+  border: none;
+}
+table.PublStatTable td, table.PublStatTable th {
+  border-left: 1px solid rgb(241, 93, 72);
+  border-bottom: 1px solid rgb(241, 93, 72);
+}
+.nobrd {
+  /*border-bottom: none;*/
+  border: none;
+}
+table.PublStatTable td, table.PublStatTable th {
+  min-height: 35px;
+  padding: 3px;
+  width: 30px;
+  height: 35px;
+}
+table.PublStatTable th {
+  /*background: #347c99;*/
+  color: black;
+  font-weight: normal;
+}
+/*Оформление таблицы Список сотрудников */
+.ListTable {
+  width: 93vw;
+  border-collapse: collapse;
+  border-spacing: 0;
+  height: auto;
+  text-alighn: center;
+}
+table.ListTable, table.ListTable td, table.ListTable th {
+  border-left: 1px solid rgb(241, 93, 72);
+  border-right: 1px solid rgb(241, 93, 72);
+  border-bottom: 1px solid rgb(241, 93, 72);
+  /*border: 1px solid #595959; */
+}
+table.ListTable td, table.ListTable th {
+  min-height: 35px;
+  padding: 3px;
+  width: 30px;
+  height: 35px;
+}
+table.ListTable th {
+  /*background: #347c99;*/
+  color: black;
+  font-weight: normal;
+}
+.round-ava {
+  border-radius: 200px; /* Радиус скругления */
+  /*border: 3px solid green; /* Параметры рамки */
+  /*box-shadow: 0 0 7px #666; /* Параметры тени */
+  width: 70px;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-size: 120%
+}
+.round-ava-marker {
+  border-radius: 200px; /* Радиус скругления */
+  /*border: 3px solid green; /* Параметры рамки */
+  /*box-shadow: 0 0 7px #666; /* Параметры тени */
+  width: 85px;
+  height: 85px;
+  background-color: aquamarine;
+  display: inline-block;
+}
+.hr-marker {
+  display: inline-block;
+}
+@media (min-width:900px) and (max-width:1300px) {
+  .will-hide {
+    display: none;
+  }
+}
+/* Форматирование таблицы с историей посещений */
+.TableHistory {
+  width: 100vw;
+  font-size: 16px;
+}
+.TableHistory td {
+  padding: 4px 10px;
+  border-left: 0.5px solid rgb(241, 93, 72);
+}
+.TableHistory tr {
+  color: black;
+}
+.TableHistory tr:nth-child(2n+1) {
+  color: black;
+  background-color: #f15d481f;
+}
+
+/* Форматирование скролбаров */
+.TableHistoryContainer {
+  scrollbar-color: #f15d48 #feebe9;     /* «цвет ползунка» «цвет полосы скроллбара» */
+}
+.TableHistoryContainer::-webkit-scrollbar {
+background-color: #feebe9; /* or add it to the track */
+}
+.TableHistoryContainer::-webkit-scrollbar-thumb {
+background: #f15d48;
+}
+
+.DataTable {
+  margin: 0px;
+  overflow: 0px;
+  border-spacing: 0px 2px;
+  width: 100%;
+  text-align: left;
+}
+.DataTable thead {
+  text-align: left;
+  overflow: auto;
+}
+.DataTable thead tr { /*PublStatTable*/
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  overflow: auto;
+}
+.DataTable tbody {
+  text-align: center;
+  background-color: #DCDCDC;
+  overflow: auto;
+}
+.DataTable tbody tr {
+  height: 40px;
+  overflow: auto;
+  text-align: center;
+  width: 100%;
+}
+.DataTable td {
+  padding: 5px;
+  text-align: left;
+}
+/*.DataTable tbody td:nth-child(2n) { background-color: #ADADAD; }*/
+/*.DataTable tbody tr:nth-child(2n+1) { background-color: red; }*/
+th.sorted[data-order="-1"]::after {
+  content: "▼"
+}
+th.sorted[data-order="1"]::after {
+  content: "▲"
+}
+th.sorted[data-order="1"], th.sorted[data-order="-1"] {
+  position: relative;
+}
+th.sorted[data-order="1"]::after, th.sorted[data-order="-1"]::after {
+  right: 8px;
+  position: absolute;
+}
+.DataTableContent {
+  display: block;
+  width: 95%;
+  white-space: nowrap;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.DataTableContent::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+  background: transparent;
+}
+.DataTable tbody tr:nth-child(2n+1) {
+  background-color: #ADADAD;
+}
+
+/*Стили для Dynamik User Info */
+.dui-div-ava-def{
+  width: 200px; 
+  height: 200px; 
+  background-image: url(https://hsto.org/r/w60/getpro/toster/25adffdd/dd22/411a/25adffdd-dd22-411a-a93e-0219b6abb88a/bw1hq78590.jpg); 
+  background-repeat:no-repeat; 
+  background-size: 100%;
+  border-radius: 200px;
+  margin-left: 23%;
+}
+
+.dui-div-ava{
+  width: 200px; 
+  height: 200px; 
+  background-repeat:no-repeat; 
+  background-size: 100%;
+  border-radius: 200px;
+  margin-left: 23%; 
+	cursor:pointer;
+}
+
+.popup {
+	position: absolute;
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	display:none;
+	text-align:center;
+}
+
+.popup_bg {
+	background:rgba(0,0,0,0.4);
+	position:absolute;
+	z-index:1;
+	height:100%;
+	width:100%;
+}
+
+
+.popup_img {
+	position: relative;
+	margin:0 auto;
+	z-index:2;
+	max-height:94%;
+	max-width:94%;
+	margin:1% 0 0 0;
+}
+
+.dui-div-ava-btn{
+  width: 200px;
+  margin-left: 23%;
+}
+
+
+.radios-as-buttons div {
+  float: left;
+  color: black;
+}
+.radios-as-buttons input {
+  position: absolute;
+  left: -9999px;
+  color: black;
+}
+.radios-as-buttons label {
+  display: block;
+  margin: 0 0 0 -2px;
+  padding: 5px 10px;
+  border: 1px solid #f15d48;
+  background: white;
+  /*box-shadow: 0 2px 5px rgba(0, 0, 0, .12);*/
+  cursor: pointer;
+  color: black;
+}
+.radios-as-buttons input:checked + label {
+  background: #f15d48;
+  /*box-shadow: inset 0 3px 6px rgba(0, 0, 0, .2);*/
+}
+.radios-as-buttons div:first-child label {
+  margin-left: 0;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.radios-as-buttons div:last-child label {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.buttonShowHideGraph {
+  width: 100px;
+  height: 50px;
+  background-color: green;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 30px;
+}
+.buttonShowHideGraph :hover {
+  background-color: lighten(green, 5%);
+  cursor: pointer;
+  cursor: hand;
+}
+#GraphDiv {
+  width: 100%;
+  height: 40%;
+  padding: 50px 0;
+  text-align: center;
+  display: block;
+}
+#container {
+  min-width: 80%;
+  max-width: 800px;
+  height: 400px;
+  margin: 0 auto
+}
+#TableIGM td, th {
+  border: 1px solid white;
+}
+#TableIGM {
+  color: red;
+}
+/*Анимашка для личного кабинета */ ::selection {
+  background-color: #F15D48;
+}
+.tabbed {
+  width: 800px;
+  margin: 50px auto;
+  color: black;
+}
+.tabbed > input {
+  display: none;
+}
+.PersonalContentContainer {
+  /*height: 65vh;*/
+  overflov: auto;
+}
+.tabbed > label {
+  display: block;
+  float: left;
+  padding: 12px 20px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background-color .3s;
+  color: black;
+}
+.form-styling-lable-settings {
+  color: black;
+}
+.tabbed > label:hover, .tabbed > input:checked + label {
+  background: #F15D48;
+}
+.tabs {
+  clear: both;
+  perspective: 600px;
+}
+.tabs > div {
+  width: 700px;
+  position: absolute;
+  border: 2px solid #F15D48;
+  padding: 10px 30px 40px;
+  line-height: 1.4em;
+  opacity: 0;
+  transform: rotateX(-20deg);
+  transform-origin: top center;
+  transition: opacity .3s, transform 1s;
+  z-index: 0;
+}
+#tab-nav-1:checked ~ .tabs > div:nth-of-type(1), #tab-nav-2:checked ~ .tabs > div:nth-of-type(2), #tab-nav-3:checked ~ .tabs > div:nth-of-type(3), #tab-nav-4:checked ~ .tabs > div:nth-of-type(4) {
+  transform: rotateX(0);
+  opacity: 1;
+  z-index: 1;
+}
+@media screen and (max-width: 700px) {
+  .tabbed {
+    width: 400px;
+  }
+  .tabbed > label {
+    display: none;
+  }
+  .tabs > div {
+    width: 400px;
+    border: none;
+    padding: 0;
+    opacity: 1;
+    position: relative;
+    transform: none;
+    margin-bottom: 60px;
+  }
+  .tabs > div h2 {
+    border-bottom: 2px solid #F15D48;
+    padding-bottom: .5em;
+  }
+}
+.form-styling-lable-all {
+  width: 35%;
+  text-align: left;
+  display: inline-block;
+}
+.form-styling-input-all {
+  width: 64.4%;
+  text-align: left;
+  display: inline-block;
+}
+.form-styling-all {
+  width: 100%;
+  height: 35px;
+  padding-left: 15px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  border-color: #f15d48;
+  border-style: solid;
+  background: white;
+}
+.btn-animate1-all {
+  width: 100%;
+  margin: auto;
+}
+.form-styling-lable-user {
+  width: 35%;
+  text-align: right;
+  display: inline-block;
+  color: black;
+  margin: 10px;
+}
+/*Preloader */
+#p_prldr {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  z-index: 30;
+}
+.contpre small {
+  font-size: 25px;
+}
+.contpre {
+  width: 250px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  margin-left: -125px;
+  margin-top: -75px;
+  color: #fff;
+  font-size: 40px;
+  letter-spacing: -2px;
+  text-align: center;
+  line-height: 35px;
+}
+#p_prldr .svg_anm {
+  position: absolute;
+  width: 41px;
+  height: 41px;
+  background: url(img/sys/spinning-circles.svg) center center no-repeat;
+  animation-iteration-count: infinite;
+  background-size: 41px;
+  margin: -16px 0 0 -16px;
+}
+/* Preloader End */
+/* CSS Document */

@@ -1,0 +1,223 @@
+#footer {
+	padding-top: 36px;
+	padding-bottom: 36px;
+	background-color: #2C346E;
+}
+
+#footer .content {
+	width: 1120px;
+	margin: auto;
+}
+
+#footer .email-sending .title {
+	font-size: 24px;
+	text-transform: uppercase;
+	color: white;
+	margin-right: 24px;
+}
+
+#footer .email-sending {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+#footer .email-sending .form {
+	display: flex;
+} 
+
+#footer .email-sending .form input {
+	font-size: 24px;
+	color: #BDBABA;
+	padding: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	background-color: #4C548D;
+	border: 0;
+	width: 400px;
+}
+
+#footer .email-sending .form input::placeholder {
+	color: #BDBABA;
+	text-transform: uppercase;
+}
+
+#footer .email-sending .form button {
+	width: 100px;
+	background-color: #4C8FFC;
+	border: 0;
+	display: block;
+}
+
+#footer .main-content {
+	margin-top: 48px;
+	display: flex;
+}
+
+#footer .list {
+	display: flex;
+	flex-direction: column;
+	width: calc(100% - 302px);
+}
+
+#footer .row {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 36px;
+}
+
+#footer .row:first-child {
+	margin-top: 0;
+}
+
+#footer .col {
+	width: 260px;
+}
+
+#footer .col a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding: 4px;
+	padding-left: 0;
+	border-bottom: solid 2px #2C346E;
+	opacity: 0.8;
+}
+
+#footer .col a:last-child {
+	padding-bottom: 0;
+}
+
+#footer .col a:hover {
+	opacity: 1;
+	transition: all .2s linear;
+}
+
+#footer .col a.title {
+	opacity: 1;
+	font-family: "Raleway-Regular", sans-serif;
+	font-size: 20px;
+	margin-bottom: 8px;
+	padding: 0;
+}
+
+#footer .info {
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	color: white;
+}
+
+#footer .info .logo img {
+	position: relative;
+	top: -12px;
+	width: 240px;
+}
+
+#footer .info .contacts div {
+	margin-bottom: 8px;
+}
+
+#footer .info .contacts div:last-child {
+	margin-bottom: 0;
+}
+
+#footer .info .contacts div a {
+	text-decoration: none;
+	color: #4C8FFC;
+}
+
+#footer .main-content .mobile-list { display: none; }
+
+#footer .mobile-contacts { display: none;  }
+
+@media screen and (max-width: 1200px) {
+
+	#footer .content { width: 100%; }
+
+	#footer .email-sending { flex-direction: column; }
+	#footer .email-sending .title { margin-bottom: 16px; }
+	#footer .email-sending .title { margin-right: 0; }
+
+	#footer .main-content { flex-direction: column; }
+
+	#footer .main-content .info {
+		width: 100%;
+	    text-align: center;
+	}
+	#footer .main-content .info .contacts { display: none;  }
+	#footer .main-content .mobile-contacts { display: block;  }
+
+	#footer .main-content .list {
+		width: 100%;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	#footer .mobile-contacts {
+		width: 200px;
+		padding-left: 20px;
+		margin-top: 40px;
+	}
+
+	#footer .mobile-contacts div {
+		margin-bottom: 8px;
+		color: white;
+	}
+
+	#footer .mobile-contacts div:last-child {
+		margin-bottom: 0;
+	}
+
+	#footer .mobile-contacts div a {
+		text-decoration: none;
+		color: #4C8FFC;
+	}
+
+}
+
+@media screen and (max-width: 425px) {
+
+	#footer .email-sending .title { font-size: 16px; }
+
+	#footer .email-sending .form input { width: 240px; font-size: 16px; }
+	#footer .email-sending .form input:placeholder { font-size: 16px; }
+	#footer .email-sending .form button { width: 80px; }
+
+	#footer  .list { display: none; }
+	#footer .main-content .mobile-list { 
+		display: flex; 
+		padding: 0; 
+		flex-direction: row; 
+		flex-wrap: wrap; 
+		justify-content: end;
+	    padding-left: 20px;
+	}
+
+	#footer .mobile-list .col { 
+		min-width: 200px; 
+		width: auto; 
+		margin-bottom: 32px;
+	}
+
+	#footer .mobile-list .col a.title { font-size: 16px; margin-bottom: 4px; }
+	#footer .mobile-list .col a { font-size: 12px; }
+
+}
+
+@media screen and (max-width: 375px) {
+
+	/*#footer .main-content .mobile-list { justify-content: center; padding-left: 0; }*/
+
+	/*#footer .mobile-contacts { margin: auto; padding-left: 0; }*/
+
+}
+
+@media screen and (max-width: 320px) {
+
+	#footer .email-sending .title { text-align: center; }
+	#footer .email-sending .form button { width: 40px; }
+
+}

@@ -1,0 +1,160 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+@font-face {
+  font-family: 'Raleway-Light';
+  src: url(/fonts/Raleway-Light.ttf);
+}
+
+@font-face {
+  font-family: 'Raleway-Regular';
+  src: url(/fonts/Raleway-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url(/fonts/OpenSans-Light.ttf);
+}
+
+@font-face {
+  font-family: 'OpenSans-Regualar';
+  src: url(/fonts/OpenSans-Regular.ttf);
+}
+
+* {
+	/*box-sizing: border-box;*/
+	font-family: 'Calibri Light','Raleway-Light', sans-serif;
+	outline: none;
+	/*user-select: none;*/
+}
+
+*:active, *:focus {
+	outline: none;
+}
+
+.main-title {
+	font-size: 28px;
+	text-transform: uppercase;
+	margin-bottom: 32px;
+}
+
+.main-title-right {
+	text-align: right;
+	margin-right: 0;
+}
+
+.main-title-right div {
+	margin-right: 0 !important;
+	margin-left: 16px;
+}
+
+.main-title div {
+	width: 160px;
+	border-bottom: 4px solid #f15d48;
+	display: inline-block;	
+	position: relative;
+	top: -6px;	
+	margin-right: 16px;
+}
+
+.main-title-mobile { display: none; }
+
+@media screen and (max-width: 425px) {
+
+	.main-title { display: none; }
+	
+	.main-title-mobile {
+		display: block;
+		text-align: center;
+		font-size: 20px;
+		margin-bottom: 16px;
+	}
+
+	.main-title-mobile .border {
+		width: calc(100% / 3);
+	    height: 4px;
+	    background-color: #f15d48;
+	    margin: auto;
+	    margin-top: 8px;
+	}
+
+}
+
+
+
+
+
+.cards {
+	display: flex;
+}
+
+.card {
+	width: 280px;
+	margin-right: 28px;
+}
+
+.card .main-content {
+	border: 4px solid #f15d48;
+	padding: 12px;
+	min-height: 320px;
+}
+
+.card .main-content .date-day {
+	font-size: 24px;
+	font-family: "OpenSans-Light", sans-serif;
+}
+
+.card .main-content .date-month {
+
+}
+
+.card .main-content .border {
+	width: 100px;
+	border-bottom: 4px solid #f15d48;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.card .main-content .body {
+	line-height: 24px;
+	padding-bottom: 16px;
+}
+
+.card .image {
+	width: 292px;
+	height: 120px;
+	margin: auto;
+	background-color: #f15d48;
+	position: relative;
+	top: -28px;
+	left: -6px;
+  
+} 
+
+.card .confirm-button {
+	text-align: center;
+	position: relative;
+	top: -8px;
+}
+
+.card .confirm-button button {
+	border: solid 2px white;
+	background-color: #f15d48;
+	color: white;
+	padding: 20px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	font-size: 14px;
+	font-family: 'Raleway-Regular', sans-serif;
+}
+
+.card .confirm-button button:hover {
+	transition: all .2s linear;
+    cursor: pointer;
+    background-color: white;
+    border: solid 2px #f15d48;
+    color: #f15d48;
+}
