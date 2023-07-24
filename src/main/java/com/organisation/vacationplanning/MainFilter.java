@@ -26,9 +26,9 @@ public class MainFilter implements Filter {
     private ITemplateEngine templateEngine;
     private JakartaServletWebApplication application;
 
-/*
-Привет мир
-*/
+    /*
+    Привет мир
+    */
     public void init(FilterConfig config) throws ServletException {
         this.application =
                 JakartaServletWebApplication.buildApplication(config.getServletContext());
@@ -41,7 +41,7 @@ public class MainFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
-        if (!process((HttpServletRequest)request, (HttpServletResponse)response)) {
+        if (!process((HttpServletRequest) request, (HttpServletResponse) response)) {
             chain.doFilter(request, response);
         }
     }
@@ -95,5 +95,11 @@ public class MainFilter implements Filter {
         templateEngine.setTemplateResolver(templateResolver);
 
         return templateEngine;
+    }
+
+    /* this is just an attempt*/
+    public static String IModify (String text) {
+        System.out.println(text);
+        return "Hello" + text;
     }
 }
