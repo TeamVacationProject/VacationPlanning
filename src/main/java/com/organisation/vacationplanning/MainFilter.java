@@ -102,4 +102,8 @@ public class MainFilter implements Filter {
         System.out.println(text);
         return "Hello" + text;
     }
+
+	public static void HelloFromDownUnder() {
+	    return;
+}
 }
