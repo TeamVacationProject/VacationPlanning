@@ -10,10 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="123e30c5-7440-4f3c-9098-b82cc208158d" name="Changes" comment="Add HibernateUtil.java">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/database/entities/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/testingdata/TestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/settings.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/listeners/StartWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/listeners/StartWebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +36,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="database" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -69,11 +74,15 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Projects/JAVA/ProjectPets/VacationPlanning/src/main/resources/META-INF",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.31724137",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
   },
@@ -85,22 +94,17 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projects\JAVA\ProjectPets\VacationPlanning\src\main\resources\META-INF" />
+      <recent name="C:\Projects\JAVA\ProjectPets\VacationPlanning\src\main\webapp\css" />
+      <recent name="C:\Projects\JAVA\ProjectPets\VacationPlanning\src\main\webapp\WEB-INF\templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\MyFiles\Documents\Documents\PR\Java\VacationPlanning\src\main\resources\static\css" />
       <recent name="F:\MyFiles\Documents\Documents\PR\Java\VacationPlanning\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Database.addEmployeeToDatabase">
-    <configuration name="Database.addEmployeeToDatabase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="VacationPlanning" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Database" />
-      <option name="METHOD_NAME" value="addEmployeeToDatabase" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="Tomcat 10.1.5" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.5" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
@@ -191,7 +195,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Database.addEmployeeToDatabase" />
         <item itemvalue="JUnit.Database.addEmployeeToDatabase" />
         <item itemvalue="JUnit.Database.addEmployeeToDatabase" />
       </list>
@@ -289,7 +292,8 @@
     <MESSAGE value="Insertion Thymeleaf" />
     <MESSAGE value="Add dependencies: Hibernate, HikariCP" />
     <MESSAGE value="Add HibernateUtil.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add HibernateUtil.java" />
+    <MESSAGE value="Configure Database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Configure Database" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
