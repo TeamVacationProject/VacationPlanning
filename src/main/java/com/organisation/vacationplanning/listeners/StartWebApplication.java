@@ -1,5 +1,6 @@
 package com.organisation.vacationplanning.listeners;
 
+import com.organisation.vacationplanning.testingdata.TestData;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -13,6 +14,8 @@ public class StartWebApplication implements ServletContextListener, HttpSessionL
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         /* This method is called when the servlet context is initialized(when the Web application is deployed). */
+        TestData testData = new TestData();
+        testData.addTestingEmployee();
     }
 
     @Override

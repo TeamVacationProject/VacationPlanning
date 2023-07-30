@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    background-color: darkblue;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.container {
+    width: 650px;
+    margin: 15px auto;
+    padding: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3),
+    0 10px 20px rgba(0,0,0,0.3),
+    0 20px 40px rgba(0,0,0,0.3),
+    0 40px 80px rgba(0,0,0,0.3);
+
+    border-radius: 10px;
+    border: 3px solid darkblue;
+    background-color: white;
+}
+
+.header {
+    text-align: center;
+}
+
+.explanation {
+    font-size: smaller;
+    color: gray;
+}
+
+input {
+    display: table-cell;
+    margin: 0 auto;
+    width: 100px;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+}
+
+#input_division {
+    margin-top: 10px;
+    padding-left: 5px;
+    border: 1px solid black;
+    width: 400px;
+}
+
+#input_num {
+    margin-top: 5px;
+    padding-left: 5px;
+    border: 1px solid black;
+    width: 50px;
+}
+
+button {
+    background-color: darkblue;
+    color: white;
+    border: 1px blue;
+    padding: 4px;
+    margin-top: 5px;
+    width: 100px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+}
+
+button:hover {
+    background-color: blue;
+}
+
+button:active {
+    box-shadow: inset 0 10px 10px rgba(0,0,0,0.5);
+}
+
+table {
+    margin-top: 10px;
+}
+
+td {
+    display: table-cell;
+    flex-direction: column;
+    padding: 0;
+    width: 120px;
+    height: 100%;
+    background-color: lightgray;
+}
+
+td button, select, option {
+    display: table;
+    padding-left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.td_data, .add_data {
+    vertical-align: middle;
+    padding-left: 10px;
+    border: 1px solid #9f9f9f;
+}
+
+.add_data button {
+    padding-left: 0;
+}
+
+select {
+    padding: 1px;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    text-align: center;
+}
+
+#no_pad_btn1, #no_pad_btn2 {
+    padding-left: 0;
+}

@@ -1,6 +1,7 @@
 package com.organisation.vacationplanning.controllers;
 
 import com.organisation.vacationplanning.services.IVacationController;
+import com.organisation.vacationplanning.services.department.DepartmentSettings;
 import org.thymeleaf.web.IWebRequest;
 
 import java.util.HashMap;
@@ -16,10 +17,7 @@ public class ControllerMappings {
     static {
         //Здесь будет инициализация сервисов
         controllersByURL = new HashMap<>();
-        //например
-        /*
-        controllersByURL.put("/create", new DepartmentSettingsController());
-        */
+        controllersByURL.put("/settings", new DepartmentSettings());
     }
     private ControllerMappings() {
         super();

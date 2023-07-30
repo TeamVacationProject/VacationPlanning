@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name = "hibernate.connection.driver_class">org.sqlite.JDBC</property>
+        <property name = "hibernate.dialect">org.hibernate.community.dialect.SQLiteDialect</property>
+        <property name = "hibernate.connection.url">jdbc:sqlite:memory:vacation_database</property>
+        <property name = "hibernate.connection.username"></property>
+        <property name = "hibernate.connection.password"></property>
+        <property name = "show_sql">true</property>
+        <property name = "hibernate.format_sql">true</property>
+        <property name = "hbm2ddl.auto">update</property>
+        <property name="hibernate.use_sql_comments">true</property>
+        <property name="hibernate.generate_statistics">false</property>
+
+        <property name="current_session_context_class">thread</property>
+        <property name="hibernate.connection.provider_class">org.hibernate.hikaricp.internal.HikariCPConnectionProvider</property>
+        <property name="hibernate.hikari.connectionTimeout">10000</property>
+        <property name="hibernate.hikari.minimumIdle">20</property>
+        <property name="hibernate.hikari.maximumPoolSize">300</property>
+        <property name="hibernate.hikari.idleTimeout">200000</property>
+
+        <mapping class="com.organisation.vacationplanning.database.entities.Employee"/>
+    </session-factory>
+</hibernate-configuration>
