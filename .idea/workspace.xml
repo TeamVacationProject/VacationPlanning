@@ -9,16 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="123e30c5-7440-4f3c-9098-b82cc208158d" name="Changes" comment="Add HibernateUtil.java">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/database/entities/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/testingdata/TestData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/settings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/settings.css" afterDir="false" />
+    <list default="true" id="123e30c5-7440-4f3c-9098-b82cc208158d" name="Changes" comment="Configure Database: add SQLite">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/listeners/StartWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/listeners/StartWebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/controllers/ControllerMappings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/controllers/ControllerMappings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/database/ConnectionPool.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/services/department/DepartmentSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/services/department/DepartmentSettings.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +75,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.31724137",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
@@ -110,7 +105,7 @@
       <deployment>
         <artifact name="VacationPlanning:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/VacationPlanning_war_exploded" />
+            <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
@@ -193,12 +188,6 @@
         </option>
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.Database.addEmployeeToDatabase" />
-        <item itemvalue="JUnit.Database.addEmployeeToDatabase" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -217,6 +206,7 @@
       <workItem from="1690108869858" duration="694000" />
       <workItem from="1690192544559" duration="1732000" />
       <workItem from="1690647847358" duration="1564000" />
+      <workItem from="1690702123421" duration="1427000" />
     </task>
     <task id="LOCAL-00001" summary="Testing remote access">
       <created>1689699041186</created>
@@ -267,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690644374676</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Configure Database: add SQLite">
+      <created>1690658365128</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1690658365128</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +290,8 @@
     <MESSAGE value="Add dependencies: Hibernate, HikariCP" />
     <MESSAGE value="Add HibernateUtil.java" />
     <MESSAGE value="Configure Database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configure Database" />
+    <MESSAGE value="Configure Database: add SQLite" />
+    <option name="LAST_COMMIT_MESSAGE" value="Configure Database: add SQLite" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
