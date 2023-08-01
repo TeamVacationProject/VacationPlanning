@@ -19,7 +19,11 @@
         <th>Вс.</th>
     </tr>
     <tr th:each="week : ${weeks}">
-        <td th:each="day : ${week}" th:text="${day}"></td>
+
+
+        <td th:each="day : ${week}"
+            th:text="${day.number}"
+            th:class="${day.type}"></td>
     </tr>
 </table>
 <!-- Вставляем слой с сообщением с помощью Thymeleaf -->

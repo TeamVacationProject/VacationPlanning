@@ -22,9 +22,10 @@ html {
 
 /* Стиль для основного контента */
 .content {
-    padding-bottom: 60px; /* Высота подвала */
+    min-height: calc(100% - 60px); /* 60px - высота подвала */
 }
 
+/* Стиль настроек */
 .container {
     width: 650px;
     margin: 15px auto;
@@ -131,10 +132,18 @@ select {
 #no_pad_btn1, #no_pad_btn2 {
     padding-left: 0;
 }
+/* Стиль календаря */
+.hidden{
+    visibility: hidden;
+}
 
-/* Стиль для основного контента */
-.content {
-    min-height: calc(100% - 60px); /* 60px - высота подвала */
+.work{
+    text-decoration-color: black;
+}
+
+.holiday{
+    color: #E7B845;
+    background: #fefefe;
 }
 /* Стиль для footer */
 footer {
