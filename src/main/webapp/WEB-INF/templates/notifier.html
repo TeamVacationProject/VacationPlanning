@@ -1,0 +1,18 @@
+
+
+<notifier>
+    <div th:text="${message}" class="notifier" th:onclick="showNotifier()">
+    </div>
+<script>
+    const notifier = document.querySelector(".notifier");
+
+
+    setTimeout(function(){
+        notifier.classList.add("visible");
+    }, 1000); // 3000 миллисекунд (3 секунды) - время показа уведомления
+
+    setTimeout(function(){
+    notifier.classList.remove("visible");
+    }, 3000); // 3000 миллисекунд (3 секунды) - время показа уведомления
+    </script>
+</notifier>

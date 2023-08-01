@@ -1,8 +1,10 @@
-package com.organisation.vacationplanning.services.department;
+package com.organisation.vacationplanning.services.calendar;
 
 import com.organisation.vacationplanning.database.HibernateUtil;
 import com.organisation.vacationplanning.database.entities.Employee;
 import com.organisation.vacationplanning.services.IVacationController;
+import com.organisation.vacationplanning.utility.NotifTypes;
+import com.organisation.vacationplanning.utility.Notifier;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -70,18 +72,13 @@ public class CalendarService implements IVacationController {
         List<Employee> employees;
         // Создание двумерного списка для представления календаря
         List<List<Integer>> weeks = new ArrayList<>();
-        /*
-        // Передача данных в шаблон
-        model.addAttribute("weeks", weeks);
-         */
+
         try(Session session = HibernateUtil.getSessionFactory().openSession()) {
             // Получение текущей даты
             LocalDate currentDate = LocalDate.now();
 
             // Получение первого дня текущего месяца
             LocalDate firstDayOfMonth = currentDate.with(TemporalAdjusters.firstDayOfMonth());
-
-
 
             // Заполнение списка днями месяца
             int day = 1;
@@ -98,6 +95,8 @@ public class CalendarService implements IVacationController {
                 weeks.add(week);
             }
         }
+        Notifier ntf = new Notifier(ctx, "Lore ipsum ...", NotifTypes.MSG);
+
         ctx.setVariable("weeks", weeks);
         templateEngine.process("calendar", ctx, writer);
     }

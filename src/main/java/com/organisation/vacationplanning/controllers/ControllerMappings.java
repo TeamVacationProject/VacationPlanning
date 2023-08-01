@@ -1,7 +1,7 @@
 package com.organisation.vacationplanning.controllers;
 
 import com.organisation.vacationplanning.services.IVacationController;
-import com.organisation.vacationplanning.services.department.CalendarService;
+import com.organisation.vacationplanning.services.calendar.CalendarService;
 import com.organisation.vacationplanning.services.department.DepartmentSettings;
 import org.thymeleaf.web.IWebRequest;
 

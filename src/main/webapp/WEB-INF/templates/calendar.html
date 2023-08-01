@@ -22,5 +22,10 @@
         <td th:each="day : ${week}" th:text="${day}"></td>
     </tr>
 </table>
+<!-- Вставляем слой с сообщением с помощью Thymeleaf -->
+<div th:replace="notifier :: notifier"></div>
+
+<!-- Вставляем подвал с помощью Thymeleaf -->
+<div th:replace="footer :: footer"></div>
 </body>
 </html>
