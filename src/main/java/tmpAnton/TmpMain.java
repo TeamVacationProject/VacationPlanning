@@ -28,20 +28,25 @@ public class TmpMain {
 
 //        Session session = null;
 
-//        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-//            Transaction tx = session.beginTransaction();
-//
-//            TmpEmployeePassBD tmpEmployeePassBD = new TmpEmployeePassBD(4, "ttt", pass, "email4");
-//            session.save(tmpEmployeePassBD);
-//
-//            tx.commit();
-//        }
+       try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+          Transaction tx = session.beginTransaction();
+
+           TmpEmployeePassBD tmpEmployeePassBD = new TmpEmployeePassBD("ttt", pass, "email4");
+           session.persist(tmpEmployeePassBD);
+
+            tx.commit();
+       }
 
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             Transaction tx = session.beginTransaction();
 
+<<<<<<< HEAD
             TmpEmployeePassBD tmpEmployeePassBD = new TmpEmployeePassBD(3, "name", "lastname", "email");
             session.save(tmpEmployeePassBD);
+=======
+            Employee employee = new Employee(1L, "fff", "ss", "hh");
+            session.persist(employee);
+>>>>>>> e0311a50820578db2bf28a18349464701c37d572
 
             tx.commit();
         }

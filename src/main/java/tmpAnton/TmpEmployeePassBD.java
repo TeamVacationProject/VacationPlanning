@@ -22,11 +22,11 @@ public class TmpEmployeePassBD implements Serializable {
     public TmpEmployeePassBD() {
     }
 
-    public TmpEmployeePassBD(int id, String login, String hashPassword, String email) {
+    public TmpEmployeePassBD(int id, String login, String HASH_PASSWORD, String e_MAIL) {
         this.id = id;
         this.login = login;
-        this.HASH_PASSWORD = hashPassword;
-        this.E_MAIL = email;
+        this.HASH_PASSWORD = HASH_PASSWORD;
+        E_MAIL = e_MAIL;
     }
 
     public TmpEmployeePassBD(String login, String HASH_PASSWORD, String e_MAIL) {
