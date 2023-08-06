@@ -10,12 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="123e30c5-7440-4f3c-9098-b82cc208158d" name="Changes" comment="Insertion Thymeleaf">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/database/entities/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/database/entities/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/services/calendar/CalendarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/services/calendar/CalendarService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -192,7 +186,7 @@
       <workItem from="1689791181063" duration="2738000" />
       <workItem from="1691082658054" duration="4422000" />
       <workItem from="1691314331717" duration="291000" />
-      <workItem from="1691314660682" duration="20865000" />
+      <workItem from="1691314660682" duration="21198000" />
     </task>
     <task id="LOCAL-00001" summary="Testing remote access">
       <created>1689699041186</created>

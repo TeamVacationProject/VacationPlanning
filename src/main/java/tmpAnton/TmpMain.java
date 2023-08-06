@@ -40,8 +40,8 @@ public class TmpMain {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             Transaction tx = session.beginTransaction();
 
-            Employee employee = new Employee(2L, "ff", "gg", "hh");
-            session.merge(employee);
+            Employee employee = new Employee(1L, "fff", "ss", "hh");
+            session.save(employee);
 
             tx.commit();
         }
