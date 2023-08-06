@@ -4,6 +4,7 @@ import com.organisation.vacationplanning.services.IVacationController;
 import com.organisation.vacationplanning.services.calendar.CalendarService;
 import com.organisation.vacationplanning.services.department.DepartmentSettings;
 import org.thymeleaf.web.IWebRequest;
+import tmpAnton.TmpServlet;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,6 +21,7 @@ public class ControllerMappings {
         controllersByURL = new HashMap<>();
         controllersByURL.put("/settings", new DepartmentSettings());
         controllersByURL.put("/calendar", new CalendarService());
+        controllersByURL.put("/test", new TmpServlet());
     }
     private ControllerMappings() {
         super();

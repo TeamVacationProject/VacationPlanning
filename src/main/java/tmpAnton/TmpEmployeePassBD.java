@@ -29,6 +29,12 @@ public class TmpEmployeePassBD implements Serializable {
         this.E_MAIL = email;
     }
 
+    public TmpEmployeePassBD(String login, String HASH_PASSWORD, String e_MAIL) {
+        this.login = login;
+        this.HASH_PASSWORD = HASH_PASSWORD;
+        E_MAIL = e_MAIL;
+    }
+
     @Override
     public String toString() {
         return "TmpEmployeePassBD{" +
