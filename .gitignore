@@ -11,6 +11,7 @@ target/
 *.iws
 *.iml
 *.ipr
+/apache-tomcat-10.1.11
 
 ### Eclipse ###
 .apt_generated

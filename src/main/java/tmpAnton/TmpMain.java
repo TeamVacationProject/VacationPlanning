@@ -20,11 +20,11 @@ public class TmpMain {
         HashingBcrypt bcrypt = new HashingBcrypt();
         String pass = bcrypt.getHashPassword("www");
 
-//        SessionFactory factory = new Configuration()
-//                .configure("hibernate.cfg.xml")
-//                .addAnnotatedClass(TmpEmployeePassBD.class)
-//                .addAnnotatedClass(TmpCookiesSessionBD.class)
-//                .buildSessionFactory();
+        SessionFactory factory = new Configuration()
+                .configure("hibernate.cfg.xml")
+                .addAnnotatedClass(TmpEmployeePassBD.class)
+                .addAnnotatedClass(TmpCookiesSessionBD.class)
+                .buildSessionFactory();
 
 //        Session session = null;
 
@@ -40,17 +40,28 @@ public class TmpMain {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             Transaction tx = session.beginTransaction();
 
-            Employee employee = new Employee(1L, "fff", "ss", "hh");
-            session.save(employee);
+            TmpEmployeePassBD tmpEmployeePassBD = new TmpEmployeePassBD(3, "name", "lastname", "email");
+            session.save(tmpEmployeePassBD);
 
             tx.commit();
         }
+
+//        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+//            Transaction tx = session.beginTransaction();
+//
+//            Employee employee = new Employee(1L, "fff", "ss", "hh");
+//            session.save(employee);
+//
+//            tx.commit();
+//        }
+
+
 
         try {
 
             //CREATE
 //            session = factory.getCurrentSession();
-//            TmpEmployeePassBD tmpEmployeePassBD = new TmpEmployeePassBD(3, "rrr", pass, "email");
+//            TmpEmployeePassBD tmpEmployeePassBD = new TmpEmployeePassBD(2, "ggg", pass, "1");
 //            session.beginTransaction();
 //            session.save(tmpEmployeePassBD);
 //            session.getTransaction().commit();
@@ -60,22 +71,12 @@ public class TmpMain {
 //            session.beginTransaction();
 //            TmpEmployeePassBD tmpEmployeePassBD = session.get(TmpEmployeePassBD.class, 1);
 //            session.getTransaction().commit();
-//            System.out.println("Start");
+//            System.out.println("Start"); //ToDo почему ищет именно по ИД, как по другому столбцу?
 //            System.out.println(tmpEmployeePassBD);
 //            String passCheck = bcrypt.getHashPassword("www");
 //            boolean d = bcrypt.checkPassword("www", tmpEmployeePassBD.getHashPassword());
 //            System.out.println("Start check");
 //            System.out.println(d);
-
-
-//            session = factory.getCurrentSession();
-//            CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
-//            CriteriaQuery<TmpEmployeePassBD> criteriaQuery = criteriaBuilder.createQuery(TmpEmployeePassBD.class);
-//            Root<TmpEmployeePassBD> root = criteriaQuery.from(TmpEmployeePassBD.class);
-//            criteriaQuery.select(root).where(criteriaBuilder.equal(root.get("E_MAIL"), "email1"));
-//            Query<TmpEmployeePassBD> query = session.createQuery(criteriaQuery);
-//            TmpEmployeePassBD employee = query.getSingleResult();
-//            System.out.println(employee); //ToDo почему ищет именно по ИД, как по другому столбцу?
 
 
             //UPDATE
@@ -103,7 +104,6 @@ public class TmpMain {
 //                session.close();
 //            }
         }
-
 
     }
 }
