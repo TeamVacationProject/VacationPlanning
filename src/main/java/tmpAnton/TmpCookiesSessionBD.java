@@ -2,9 +2,12 @@ package tmpAnton;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
+
 @Entity
 @Table(name = "tmpCookiesSessionBD")
-public class TmpCookiesSessionBD {
+public class TmpCookiesSessionBD implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,6 +22,9 @@ public class TmpCookiesSessionBD {
     @Column(name = "TIME_END")
     private String timeEnd;
 
+//    @OneToOne(mappedBy = "tmpCookiesSessionBD")
+//    private TmpEmployeePassBD tmpEmployeePassBD;
+
     public TmpCookiesSessionBD() {
     }
 
@@ -28,6 +34,26 @@ public class TmpCookiesSessionBD {
         this.cookies = cookies;
         this.timeStart = timeStart;
         this.timeEnd = timeEnd;
+    }
+
+    public TmpCookiesSessionBD(String login, String cookies, String timeStart, String timeEnd) {
+        this.login = login;
+        this.cookies = cookies;
+        this.timeStart = timeStart;
+        this.timeEnd = timeEnd;
+    }
+
+    @Override
+    public String toString() {
+        return "TmpCookiesSessionBD{" +
+                "id=" + id +
+                ", login='" + login + '\'' +
+                ", cookies='" + cookies + '\'' +
+                ", timeStart='" + timeStart + '\'' +
+                ", timeEnd='" + timeEnd + '\''
+//                ", tmpEmployeePassBD=" + tmpEmployeePassBD +
+//                '}';
+        ;
     }
 
     public int getId() {

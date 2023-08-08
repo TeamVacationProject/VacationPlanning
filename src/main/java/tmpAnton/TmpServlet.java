@@ -35,11 +35,13 @@ public class TmpServlet extends HttpServlet implements IVacationController {
         if (webExchange.getRequest().getMethod().equals("GET")) {
 
             String id = webExchange.getRequest().getParameterValue("id");
-            String login = webExchange.getRequest().getParameterValue("login");
-            String HASH_PASSWORD = webExchange.getRequest().getParameterValue("HASH_PASSWORD");
             String E_MAIL = webExchange.getRequest().getParameterValue("E_MAIL");
+            String HASH_PASSWORD = webExchange.getRequest().getParameterValue("HASH_PASSWORD");
+            String login = webExchange.getRequest().getParameterValue("login");
 
-            dao.createUser(id, login, HASH_PASSWORD, E_MAIL);
+            dao.createUser(id, E_MAIL, HASH_PASSWORD, login);
+
+//            http://localhost:8080/VacationPlanning_war_exploded/test?id=4&E_MAIL=tt&HASH_PASSWORD=yy&login=uuu
         }
     }
 }

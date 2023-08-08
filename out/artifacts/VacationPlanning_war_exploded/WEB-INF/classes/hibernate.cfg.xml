@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name = "hibernate.connection.driver_class">org.sqlite.JDBC</property>
+        <property name = "hibernate.dialect">org.hibernate.community.dialect.SQLiteDialect</property>
+        <property name = "hibernate.connection.url">jdbc:sqlite:/apache-tomcat-10.1.11/bin/vacation_database2.db</property>
+<!--        http://94.250.250.130/usr/src/vacation_database.db-->
+<!--        <property name = "hibernate.connection.url">jdbc:sqlite://localhost:8081/94.250.250.130/usr/src/vacation_database.db</property>-->
+<!--        <property name = "hibernate.connection.url">jdbc:sqlite:C:\Users\genes\IdeaProjects\1NewVolna\VacationPlanning\vacation_database.db</property>-->
+        <property name = "hibernate.connection.username"></property>
+        <property name = "hibernate.connection.password"></property>
+        <property name = "show_sql">true</property>
+        <property name = "hibernate.format_sql">true</property>
+        <property name = "hibernate.connection.datasource">vacation_database2</property>
+        <property name = "hbm2ddl.auto">update</property>
+        <property name="hibernate.use_sql_comments">true</property>
+        <property name="hibernate.generate_statistics">false</property>
+
+        <property name="current_session_context_class">thread</property>
+        <property name="hibernate.connection.provider_class">org.hibernate.hikaricp.internal.HikariCPConnectionProvider</property>
+        <property name="hibernate.hikari.connectionTimeout">10000</property>
+        <property name="hibernate.hikari.minimumIdle">20</property>
+        <property name="hibernate.hikari.maximumPoolSize">300</property>
+        <property name="hibernate.hikari.idleTimeout">200000</property>
+
+        <!--        новый код-->
+        <!--        <property name="connection.autocommit">true</property>-->
+        <!--        новый код-->
+
+        <mapping class="com.organisation.vacationplanning.database.entities.Employee"/>
+        <mapping class="tmpAnton.TmpEmployeePassBD"/>
+        <mapping class="tmpAnton.TmpCookiesSessionBD"/>
+    </session-factory>
+</hibernate-configuration>

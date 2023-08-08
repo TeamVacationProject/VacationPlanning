@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <title>Календарик...</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{css/settings.css}">
+
+</head>
+<body>
+<h1>Calendar</h1>
+<table>
+    <tr>
+        <th>Пн.</th>
+        <th>Вт.</th>
+        <th>Ср.</th>
+        <th>Чт.</th>
+        <th>Пт.</th>
+        <th>Сб.</th>
+        <th>Вс.</th>
+    </tr>
+    <tr th:each="week : ${weeks}">
+
+
+        <td th:each="day : ${week}"
+            th:text="${day.number}"
+            th:class="${day.type}"></td>
+    </tr>
+</table>
+<!-- Вставляем слой с сообщением с помощью Thymeleaf -->
+<div th:replace="notifier :: notifier"></div>
+
+<!-- Вставляем подвал с помощью Thymeleaf -->
+<div th:replace="footer :: footer"></div>
+</body>
+</html>
