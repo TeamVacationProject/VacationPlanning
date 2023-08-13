@@ -1,38 +1,54 @@
 package tmpAnton;
 
-import com.organisation.vacationplanning.database.HibernateUtil;
-import com.organisation.vacationplanning.database.entities.Employee;
-import jakarta.persistence.criteria.CriteriaBuilder;
-import jakarta.persistence.criteria.CriteriaQuery;
-import jakarta.persistence.criteria.Root;
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.query.Query;
+import at.favre.lib.crypto.bcrypt.BCrypt;
+import tmpAnton.cookieservise.TokensUserBD;
+import tmpAnton.cookieservise.TokensUserDAO;
+import tmpAnton.signinservise.RegisteredUsersBD;
+import tmpAnton.signinservise.RegisteredUsersDAO;
 
-import java.util.List;
-
-import static com.organisation.vacationplanning.database.HibernateUtil.getSessionFactory;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+import java.time.LocalDateTime;
+import java.util.Arrays;
+import java.util.UUID;
 
 public class TmpMain {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchAlgorithmException {
 
         HashingBcrypt bcrypt = new HashingBcrypt();
+        String password = "www";
+        byte[] salt = BCrypt.with(new SecureRandom()).hash(6, password.getBytes(StandardCharsets.UTF_8));
         String pass = bcrypt.getHashPassword("www");
+
+        BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), pass);
+
+//        System.out.println(result);
+
+        String token = UUID.randomUUID().toString();
+
+//        System.out.println(LocalDateTime.now().plusMinutes(15));
+//        System.out.println(bcrypt.checkPassword(pass, pass));
+
+        TokensUserDAO tokensUserDAO = new TokensUserDAO();
+//        TokensUserBD ww = tokensUserDAO.findToken("ww");
+//        TokensUserBD ww = tokensUserDAO.findTokenByID("1");
+        LocalDateTime now = LocalDateTime.now();
+//        System.out.println(ww.getLogin());
+        tokensUserDAO.deleteToken("ww");
 
 
         //CREATE
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            Transaction tx = session.beginTransaction();
-
-            TmpEmployeePassBD tmpEmployeePassBD = new TmpEmployeePassBD("ggg3", "pass2", "email9");
-            session.persist(tmpEmployeePassBD);
-
-//            session.flush();
-            tx.commit();
-        }
+//        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+//            Transaction tx = session.beginTransaction();
+//
+//            TmpEmployeePassBD tmpEmployeePassBD = new TmpEmployeePassBD("ggg3", "pass2", "email9");
+//            session.persist(tmpEmployeePassBD);
+//
+////            session.flush();
+//            tx.commit();
+//        }
 
         //CREATE
 //        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
@@ -98,3 +114,4 @@ public class TmpMain {
 
     }
 }
+

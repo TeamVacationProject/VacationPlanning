@@ -5,6 +5,7 @@ import com.organisation.vacationplanning.services.auth.AuthService;
 import com.organisation.vacationplanning.services.calendar.CalendarService;
 import com.organisation.vacationplanning.services.department.DepartmentSettings;
 import org.thymeleaf.web.IWebRequest;
+import tmpAnton.signinservise.SignFormService;
 import tmpAnton.TmpServlet;
 
 import java.util.HashMap;
@@ -24,6 +25,7 @@ public class ControllerMappings {
         controllersByURL.put("/settings", new DepartmentSettings());
         controllersByURL.put("/calendar", new CalendarService());
         controllersByURL.put("/test", new TmpServlet());
+        controllersByURL.put("/signform", new SignFormService());
     }
     private ControllerMappings() {
         super();

@@ -33,5 +33,7 @@
         <mapping class="com.organisation.vacationplanning.database.entities.Employee"/>
         <mapping class="tmpAnton.TmpEmployeePassBD"/>
         <mapping class="tmpAnton.TmpCookiesSessionBD"/>
+        <mapping class="tmpAnton.signinservise.RegisteredUsersBD"/>
+        <mapping class="tmpAnton.cookieservise.TokensUserBD"/>
     </session-factory>
 </hibernate-configuration>

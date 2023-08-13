@@ -10,22 +10,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="123e30c5-7440-4f3c-9098-b82cc208158d" name="Changes" comment="Insertion Thymeleaf">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/VacationPlanning_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tmpAnton/cookieservise/TokensUserBD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tmpAnton/cookieservise/TokensUserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tmpAnton/signinservise/RegisteredUsersBD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tmpAnton/signinservise/RegisteredUsersDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tmpAnton/signinservise/SignFormService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tmpAnton/signinservise/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/available.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/signform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/unavailable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identifier.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/memory" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/services/auth/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/services/auth/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tmpAnton/TmpCookiesSessionBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tmpAnton/TmpCookiesSessionBD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tmpAnton/TmpEmployeePassBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tmpAnton/TmpEmployeePassBD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tmpAnton/TmpEmployeePassDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tmpAnton/TmpEmployeePassDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/controllers/ControllerMappings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/controllers/ControllerMappings.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/testingdata/TestData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/testingdata/TestData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/TmpCookiesSessionBD_.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/TmpCookiesSessionBD_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/TmpEmployeePassBD_.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/TmpEmployeePassBD_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/TmpMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/TmpMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/controllers/ControllerMappings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/controllers/ControllerMappings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/testingdata/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/testingdata/TestData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tmpAnton/TmpMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tmpAnton/TmpMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tmpAnton/TmpServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tmpAnton/TmpServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vacation_database" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vacation_database.db" beforeDir="false" afterPath="$PROJECT_DIR$/vacation_database.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +44,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -66,6 +76,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
@@ -94,7 +105,7 @@
       <module name="VacationPlanning" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tmpAnton.*" />
+          <option name="PATTERN" value="tmpAnton.signinservise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -215,7 +226,12 @@
       <workItem from="1691314331717" duration="291000" />
       <workItem from="1691314660682" duration="21720000" />
       <workItem from="1691424957493" duration="9698000" />
-      <workItem from="1691510509782" duration="12460000" />
+      <workItem from="1691510509782" duration="12959000" />
+      <workItem from="1691602197098" duration="3400000" />
+      <workItem from="1691682705479" duration="14353000" />
+      <workItem from="1691774050801" duration="4822000" />
+      <workItem from="1691851025439" duration="6633000" />
+      <workItem from="1691907580944" duration="9062000" />
     </task>
     <task id="LOCAL-00001" summary="Testing remote access">
       <created>1689699041186</created>
@@ -269,6 +285,17 @@
     <MESSAGE value="Add base code to ControllerMappings" />
     <MESSAGE value="Insertion Thymeleaf" />
     <option name="LAST_COMMIT_MESSAGE" value="Insertion Thymeleaf" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tmpAnton/cookieservise/TokensUserDAO.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
