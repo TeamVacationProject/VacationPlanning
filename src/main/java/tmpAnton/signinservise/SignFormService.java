@@ -65,6 +65,8 @@ public class SignFormService implements IVacationController {
                     tokensUserDAO.deleteToken(login);
                 }
 
+                //ToDo добавить в форму ключевое слово
+
                 tokensUserDAO.createToken(login);
                 webExchange.getSession().setAttributeValue("login", login);
                 webExchange.getSession().setAttributeValue("token", tokensUserDAO.findToken(login).getUuid());

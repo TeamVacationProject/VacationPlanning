@@ -1,6 +1,7 @@
 package tmpAnton.cookieservise;
 
 import jakarta.persistence.*;
+import tmpAnton.signinservise.RegisteredUsersBD;
 import tmpAnton.signinservise.UserRole;
 
 import java.time.LocalDateTime;
@@ -14,12 +15,16 @@ public class TokensUserBD {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
-    @Column(name = "login")
+    @Column(name = "login", unique = true)
     private String login;
     @Column(name = "uuid")
     private String uuid;
     @Column(name = "expires_at")
     private LocalDateTime dateTimeExpiresAt;
+
+    @OneToOne
+    @JoinColumn(name = "registered_user_id")
+    private RegisteredUsersBD registeredUsersBD;
 
     public TokensUserBD(String login) {
         this.login = login;
@@ -61,5 +66,13 @@ public class TokensUserBD {
 
     public void setDateTimeExpiresAt(LocalDateTime dateTimeExpiresAt) {
         this.dateTimeExpiresAt = dateTimeExpiresAt;
+    }
+
+    public RegisteredUsersBD getRegisteredUsersBD() {
+        return registeredUsersBD;
+    }
+
+    public void setRegisteredUsersBD(RegisteredUsersBD registeredUsersBD) {
+        this.registeredUsersBD = registeredUsersBD;
     }
 }

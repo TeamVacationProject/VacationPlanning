@@ -1,6 +1,7 @@
 package tmpAnton;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
+import jakarta.servlet.http.Cookie;
 import tmpAnton.cookieservise.TokensUserBD;
 import tmpAnton.cookieservise.TokensUserDAO;
 import tmpAnton.signinservise.RegisteredUsersBD;
@@ -24,6 +25,8 @@ public class TmpMain {
 
         BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), pass);
 
+//        Cookie cookie = new Cookie("v", "123");
+
 //        System.out.println(result);
 
         String token = UUID.randomUUID().toString();
@@ -36,7 +39,11 @@ public class TmpMain {
 //        TokensUserBD ww = tokensUserDAO.findTokenByID("1");
         LocalDateTime now = LocalDateTime.now();
 //        System.out.println(ww.getLogin());
-        tokensUserDAO.deleteToken("ww");
+//        tokensUserDAO.deleteToken("ww");
+        RegisteredUsersDAO registeredUsersDAO = new RegisteredUsersDAO();
+        RegisteredUsersBD user = registeredUsersDAO.findUser("bb", "bb");
+        String uuid = user.getTokensUserBD().getUuid();
+        System.out.println(uuid);
 
 
         //CREATE

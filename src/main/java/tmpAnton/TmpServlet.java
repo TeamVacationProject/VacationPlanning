@@ -54,7 +54,7 @@ public class TmpServlet extends HttpServlet implements IVacationController {
             if (user == null) {
                 Desktop d = Desktop.getDesktop();
                 try {
-                    d.browse(new URI("http://localhost:8080/VacationPlanning_war_exploded/signform"));
+                    d.browse(new URI("http://localhost:8080/signform"));
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 } catch (URISyntaxException e) {

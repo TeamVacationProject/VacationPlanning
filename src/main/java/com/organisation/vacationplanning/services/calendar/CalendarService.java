@@ -30,8 +30,10 @@ public class CalendarService implements IVacationController {
     public void process(IWebExchange webExchange, ITemplateEngine templateEngine, Writer writer) throws Exception {
         ctx = new WebContext(webExchange, webExchange.getLocale());
         if (webExchange.getRequest().getMethod().equals("POST")) {
+
             handlePost(webExchange);
             handleGet(webExchange, templateEngine, writer);
+
         }
         if (webExchange.getRequest().getMethod().equals("GET")) {
             handleGet(webExchange, templateEngine, writer);

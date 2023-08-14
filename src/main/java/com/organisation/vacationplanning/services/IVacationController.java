@@ -1,5 +1,6 @@
 package com.organisation.vacationplanning.services;
 
+import jakarta.servlet.http.HttpServletResponse;
 import org.thymeleaf.ITemplateEngine;
 import org.thymeleaf.web.IWebExchange;
 
