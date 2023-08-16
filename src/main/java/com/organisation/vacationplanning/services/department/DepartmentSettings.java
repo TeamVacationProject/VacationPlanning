@@ -3,6 +3,7 @@ package com.organisation.vacationplanning.services.department;
 import com.organisation.vacationplanning.database.HibernateUtil;
 import com.organisation.vacationplanning.database.entities.Employee;
 import com.organisation.vacationplanning.services.IVacationController;
+import jakarta.servlet.http.HttpServletResponse;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -20,14 +21,14 @@ public class DepartmentSettings implements IVacationController {
     private static final String ALL_EMPLOYEES = "from Employee";
     private WebContext ctx;
     @Override
-    public void process(IWebExchange webExchange, ITemplateEngine templateEngine, Writer writer) throws Exception {
+    public void process(IWebExchange webExchange, ITemplateEngine templateEngine, Writer writer, HttpServletResponse response) throws Exception {
         ctx = new WebContext(webExchange, webExchange.getLocale());
         if(webExchange.getRequest().getMethod().equals("POST")) {
             handlePost(webExchange);
-            handleGet(templateEngine, writer);
+            handleGet(templateEngine, writer, response);
         }
         if (webExchange.getRequest().getMethod().equals("GET")) {
-            handleGet(templateEngine, writer);
+            handleGet(templateEngine, writer, response);
         }
     }
 
@@ -63,7 +64,7 @@ public class DepartmentSettings implements IVacationController {
         }
     }
 
-    private void handleGet(ITemplateEngine templateEngine, Writer writer) {
+    private void handleGet(ITemplateEngine templateEngine, Writer writer, HttpServletResponse response) {
         List<Employee> employees;
 
         try(Session session = HibernateUtil.getSessionFactory().openSession()) {

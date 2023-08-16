@@ -5,6 +5,7 @@ import com.organisation.vacationplanning.database.entities.Employee;
 import com.organisation.vacationplanning.services.IVacationController;
 import com.organisation.vacationplanning.utility.NotifTypes;
 import com.organisation.vacationplanning.utility.Notifier;
+import jakarta.servlet.http.HttpServletResponse;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -27,16 +28,16 @@ public class CalendarService implements IVacationController {
     private WebContext ctx;
 
     @Override
-    public void process(IWebExchange webExchange, ITemplateEngine templateEngine, Writer writer) throws Exception {
+    public void process(IWebExchange webExchange, ITemplateEngine templateEngine, Writer writer, HttpServletResponse response) throws Exception {
         ctx = new WebContext(webExchange, webExchange.getLocale());
         if (webExchange.getRequest().getMethod().equals("POST")) {
 
             handlePost(webExchange);
-            handleGet(webExchange, templateEngine, writer);
+            handleGet(webExchange, templateEngine, writer, response);
 
         }
         if (webExchange.getRequest().getMethod().equals("GET")) {
-            handleGet(webExchange, templateEngine, writer);
+            handleGet(webExchange, templateEngine, writer, response);
         }
     }
 
@@ -44,7 +45,7 @@ public class CalendarService implements IVacationController {
 
     }
 
-    private void handleGet(IWebExchange webExchange, ITemplateEngine templateEngine, Writer writer) {
+    private void handleGet(IWebExchange webExchange, ITemplateEngine templateEngine, Writer writer, HttpServletResponse response) {
         // Создание двумерного списка для представления календаря
         List<List<Day>> weeks = new ArrayList<>();
         String msg = "no data";

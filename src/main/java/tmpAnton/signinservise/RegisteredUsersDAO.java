@@ -7,8 +7,6 @@ import org.hibernate.Transaction;
 import tmpAnton.HashingBcrypt;
 import tmpAnton.cookieservise.TokensUserBD;
 
-import java.util.List;
-
 public class RegisteredUsersDAO {
 
     HashingBcrypt bcrypt = new HashingBcrypt();
@@ -22,10 +20,13 @@ public class RegisteredUsersDAO {
             RegisteredUsersBD registeredUsersBD = new RegisteredUsersBD(login, email, hashPassword);
             TokensUserBD tokensUser = new TokensUserBD();
             tokensUser.setRegisteredUsersBD(registeredUsersBD);
+            tokensUser.setLogin(login);
             Employee employee = new Employee();
             employee.setRegisteredUsersBD(registeredUsersBD);
+            employee.setLogin(login);
             registeredUsersBD.setTokensUserBD(tokensUser);
             registeredUsersBD.setEmployee(employee);
+
             session.persist(registeredUsersBD);
 
             session.flush();
@@ -55,5 +56,22 @@ public class RegisteredUsersDAO {
         } else {
             return null;
         }
+    }
+
+    public RegisteredUsersBD findUserByLogin(String login) {
+
+        RegisteredUsersBD user;
+
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            Transaction tx = session.beginTransaction();
+
+            user = (RegisteredUsersBD) session.createQuery("from RegisteredUsersBD e where e.login = :login")
+                    .setParameter("login", login).getSingleResult();
+
+
+            session.flush();
+            tx.commit();
+        }
+        return user;
     }
 }

@@ -1,7 +1,6 @@
 package tmpAnton;
 
 import com.organisation.vacationplanning.services.IVacationController;
-import jakarta.persistence.Column;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -10,15 +9,11 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.thymeleaf.ITemplateEngine;
 import org.thymeleaf.context.WebContext;
 import org.thymeleaf.web.IWebExchange;
-import tmpAnton.cookieservise.TokensUserBD;
-import tmpAnton.cookieservise.TokensUserDAO;
+import tmpAnton.cookieservise.ControlValidated;
 
-import java.awt.*;
 import java.io.IOException;
 import java.io.Writer;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.time.LocalDateTime;
+import java.util.Map;
 
 @WebServlet("/test")
 public class TmpServlet extends HttpServlet implements IVacationController {
@@ -39,32 +34,46 @@ public class TmpServlet extends HttpServlet implements IVacationController {
     }
 
     @Override
-    public void process(IWebExchange webExchange, ITemplateEngine templateEngine, Writer writer) throws Exception {
+    public void process(IWebExchange webExchange, ITemplateEngine templateEngine, Writer writer, HttpServletResponse response) throws Exception {
         ctx = new WebContext(webExchange, webExchange.getLocale());
 
         if (webExchange.getRequest().getMethod().equals("GET")) {
 
+            ControlValidated controlValidated = new ControlValidated();
 
-            String login = (String) webExchange.getSession().getAttributeValue("login");
-            String token = (String) webExchange.getSession().getAttributeValue("token");
-            TokensUserDAO tokensUserDAO = new TokensUserDAO();
-            TokensUserBD user = tokensUserDAO.findToken(login);
-            LocalDateTime now = LocalDateTime.now();
+            if (controlValidated.checkValidate(webExchange.getRequest().getCookieMap())) {
 
-            if (user == null) {
-                Desktop d = Desktop.getDesktop();
-                try {
-                    d.browse(new URI("http://localhost:8080/signform"));
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                } catch (URISyntaxException e) {
-                    throw new RuntimeException(e);
-                }
-            } else if (now.isBefore(user.getDateTimeExpiresAt()) && user.getUuid().equals(token)) {
+                Map<String, String> fullNameUser = controlValidated.getFullNameUser(webExchange.getRequest().getCookieMap());
+                String firstName = fullNameUser.get("firstName");
+                String surname = fullNameUser.get("surname");
+                String patronymic = fullNameUser.get("patronymic");
+
                 templateEngine.process("available", ctx, writer);
+
             } else {
-                templateEngine.process("unavailable", ctx, writer);
+                response.sendRedirect("/signform");
             }
+
+//            String login = (String) webExchange.getSession().getAttributeValue("login");
+//            String token = (String) webExchange.getSession().getAttributeValue("token");
+//            TokensUserDAO tokensUserDAO = new TokensUserDAO();
+//            TokensUserBD user = tokensUserDAO.findToken(login);
+//            LocalDateTime now = LocalDateTime.now();
+//
+//            if (user == null) {
+//                Desktop d = Desktop.getDesktop();
+//                try {
+//                    d.browse(new URI("http://localhost:8080/signform"));
+//                } catch (IOException e) {
+//                    throw new RuntimeException(e);
+//                } catch (URISyntaxException e) {
+//                    throw new RuntimeException(e);
+//                }
+//            } else if (now.isBefore(user.getDateTimeExpiresAt()) && user.getUuid().equals(token)) {
+//                templateEngine.process("available", ctx, writer);
+//            } else {
+//                templateEngine.process("unavailable", ctx, writer);
+//            }
 
 
 

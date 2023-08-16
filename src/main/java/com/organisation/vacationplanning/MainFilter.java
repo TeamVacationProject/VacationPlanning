@@ -69,7 +69,7 @@ public class MainFilter implements Filter {
             response.setDateHeader("Expires", 0);
 
             final Writer writer = response.getWriter();
-            controller.process(webExchange, this.templateEngine, writer);
+            controller.process(webExchange, this.templateEngine, writer, response);
             return true;
         } catch (final Exception e) {
             try {

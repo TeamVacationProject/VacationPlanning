@@ -7,12 +7,16 @@ import tmpAnton.cookieservise.TokensUserDAO;
 import tmpAnton.signinservise.RegisteredUsersBD;
 import tmpAnton.signinservise.RegisteredUsersDAO;
 
+import java.io.IOException;
+import java.net.HttpCookie;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.UUID;
 
 public class TmpMain {
@@ -40,10 +44,22 @@ public class TmpMain {
         LocalDateTime now = LocalDateTime.now();
 //        System.out.println(ww.getLogin());
 //        tokensUserDAO.deleteToken("ww");
-        RegisteredUsersDAO registeredUsersDAO = new RegisteredUsersDAO();
-        RegisteredUsersBD user = registeredUsersDAO.findUser("bb", "bb");
-        String uuid = user.getTokensUserBD().getUuid();
-        System.out.println(uuid);
+//        RegisteredUsersDAO registeredUsersDAO = new RegisteredUsersDAO();
+//        RegisteredUsersBD user = registeredUsersDAO.findUser("bb", "bb");
+//        String uuid = user.getTokensUserBD().getUuid();
+//        System.out.println(uuid);
+
+//        tokensUserDAO.findTokenByID("43");
+        TokensUserBD vv = tokensUserDAO.findToken("ii");
+
+        System.out.println(vv.getLogin());
+
+
+//        LocalDateTime dateTimeExpiresAt = LocalDateTime.now();
+//        LocalDateTime dateTimeExpiresAt2 = LocalDateTime.now().plusHours(1);
+//        String s = String.valueOf(dateTimeExpiresAt2);
+//        LocalDateTime ss = LocalDateTime.parse(s);
+//        System.out.println(dateTimeExpiresAt.isBefore(ss));
 
 
         //CREATE

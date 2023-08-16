@@ -3,7 +3,6 @@ package tmpAnton.cookieservise;
 import com.organisation.vacationplanning.database.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import tmpAnton.signinservise.RegisteredUsersBD;
 
 public class TokensUserDAO {
 
@@ -12,8 +11,12 @@ public class TokensUserDAO {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             Transaction tx = session.beginTransaction();
 
-            TokensUserBD tokensUserBD = new TokensUserBD(login);
-            session.persist(tokensUserBD);
+            TokensUserBD tokensUserBD = findToken(login);
+            tokensUserBD.createTokenUUID();
+            tokensUserBD.createExpireTime();
+            tokensUserBD.setLogin(login);
+
+            session.update(tokensUserBD);
 
             session.flush();
             tx.commit();
@@ -40,7 +43,7 @@ public class TokensUserDAO {
         return token;
     }
 
-    public TokensUserBD findTokenByID(String login) {
+    public TokensUserBD findTokenByID(int registered_user_id) {
 
         TokensUserBD tokensUserBD;
 
@@ -48,7 +51,7 @@ public class TokensUserDAO {
             Transaction tx = session.beginTransaction();
             try {
 
-                tokensUserBD = session.get(TokensUserBD.class, 1);
+                tokensUserBD = session.get(TokensUserBD.class, registered_user_id);
 
             } catch (Exception e) {
                 return null;
@@ -59,15 +62,17 @@ public class TokensUserDAO {
         return tokensUserBD;
     }
 
-    public void deleteToken(String login) {
+    public void updateTokenUser(String login) {
 
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             Transaction tx = session.beginTransaction();
 
             TokensUserBD tokensUserBD = (TokensUserBD) session.createQuery("from TokensUserBD e where e.login = :login")
                     .setParameter("login", login).getSingleResult();
-            session.delete(tokensUserBD);
 
+            tokensUserBD.createTokenUUID();
+            tokensUserBD.createExpireTime();
+            session.update(tokensUserBD);
             session.flush();
             tx.commit();
         }

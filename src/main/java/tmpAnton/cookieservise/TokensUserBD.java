@@ -2,7 +2,6 @@ package tmpAnton.cookieservise;
 
 import jakarta.persistence.*;
 import tmpAnton.signinservise.RegisteredUsersBD;
-import tmpAnton.signinservise.UserRole;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -22,18 +21,24 @@ public class TokensUserBD {
     @Column(name = "expires_at")
     private LocalDateTime dateTimeExpiresAt;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "registered_user_id")
     private RegisteredUsersBD registeredUsersBD;
 
     public TokensUserBD(String login) {
         this.login = login;
-        uuid = UUID.randomUUID().toString();
-        dateTimeExpiresAt = LocalDateTime.now().plusHours(1);
     }
 
     public TokensUserBD() {
 
+    }
+
+    public void createTokenUUID() {
+        uuid = UUID.randomUUID().toString();
+    }
+
+    public void createExpireTime() {
+        dateTimeExpiresAt = LocalDateTime.now().plusHours(1);
     }
 
     public int getId() {

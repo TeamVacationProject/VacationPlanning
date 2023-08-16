@@ -34,8 +34,6 @@ public class RegisteredUsersBD implements Serializable {
         this.hash_password = hash_password;
         this.email = email;
         userRole = UserRole.USER;
-//        tokensUserBD = new TokensUserBD(login);
-//        employee = new Employee(login);
     }
 
     public RegisteredUsersBD(String login, String hash_password) {

@@ -26,7 +26,7 @@ public class Employee implements Serializable {
     @Enumerated(EnumType.STRING)
     private UserRole userRole;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "registered_user_id")
     private RegisteredUsersBD registeredUsersBD;
 
