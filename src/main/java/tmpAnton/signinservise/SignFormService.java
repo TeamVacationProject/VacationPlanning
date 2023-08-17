@@ -7,6 +7,7 @@ import org.thymeleaf.ITemplateEngine;
 import org.thymeleaf.context.WebContext;
 import org.thymeleaf.web.IWebExchange;
 import tmpAnton.HashingBcrypt;
+import tmpAnton.cookieservise.ControlValidated;
 import tmpAnton.cookieservise.TokensUserBD;
 import tmpAnton.cookieservise.TokensUserDAO;
 
@@ -20,6 +21,8 @@ public class SignFormService implements IVacationController {
     private final RegisteredUsersDAO usersDAO = new RegisteredUsersDAO();
     private final TokensUserDAO tokensUserDAO = new TokensUserDAO();
     private final HashingBcrypt bcrypt = new HashingBcrypt();
+    private final ControlValidated controlValidated = new ControlValidated();
+    private String csrfToken = "";
 
     @Override
     public void process(IWebExchange webExchange, ITemplateEngine templateEngine, Writer writer, HttpServletResponse response) throws Exception {
@@ -28,7 +31,8 @@ public class SignFormService implements IVacationController {
 
         if (webExchange.getRequest().getMethod().equals("GET")) {
 
-            String csrfToken = generateCSRFToken();
+            csrfToken = generateCSRFToken();
+            ctx.setVariable("csrfToken", csrfToken);
             webExchange.getSession().setAttributeValue("csrfToken", csrfToken);
 
             templateEngine.process("signform", ctx, writer);
@@ -44,56 +48,46 @@ public class SignFormService implements IVacationController {
 
         String login = webExchange.getRequest().getParameterValue("login");
         String email = webExchange.getRequest().getParameterValue("email");
-        //ToDo добавить в форму ключевое слово
+
         String storedToken = (String) webExchange.getSession().getAttributeValue("csrfToken");
         String requestToken = webExchange.getRequest().getParameterValue("csrfToken");
 
-        if (storedToken != null && requestToken != null && storedToken.equals(requestToken)) {
-            // Токен совпадает, продолжайте обработку запроса
-            // ...
-        } else {
-            // CSRF-атака, обработайте ошибку
-            // ...
-        }
+        //ToDo добавить капчу https://www.tune-it.ru/web/marina/blog/-/blogs/16582509
 
-        //ToDo проверка на корректность ввода
-        if (email != null) {
-            String hashPassword = bcrypt.getHashPassword(webExchange.getRequest().getParameterValue("password"));
-            usersDAO.createUser(login, email, hashPassword);
-        } else if (login != null) {
-            //ToDo ПРОВЕРИТЬ СООТВЕТСТВИЕ ПОЛЕЙ КЛАССА И БД!!!!!!!!!!!!!!!!!!!!!
-            RegisteredUsersBD user = usersDAO.findUser(login, webExchange.getRequest().getParameterValue("password"));
-            if (user != null) {
+        if (storedToken != null && storedToken.equals(requestToken) && requestToken.equals(csrfToken)) {
+            //ToDo проверка на корректность ввода
+            if (email != null) {
+                String hashPassword = bcrypt.getHashPassword(webExchange.getRequest().getParameterValue("password"));
+                usersDAO.createUser(login, email, hashPassword);
+            } else if (login != null) {
+                //ToDo ПРОВЕРИТЬ СООТВЕТСТВИЕ ПОЛЕЙ КЛАССА И БД!!!!!!!!!!!!!!!!!!!!!
+                RegisteredUsersBD user = usersDAO.findUser(login, webExchange.getRequest().getParameterValue("password"));
+                if (user != null) {
 
-                TokensUserBD userToken = tokensUserDAO.findToken(login);
-                if (!(userToken.getUuid() == null)) {
-                    tokensUserDAO.updateTokenUser(login);
+                    String d = "";
+
+                    if (!(user.getTokensUserBD().getUuid() == null)) {
+                        tokensUserDAO.updateTokenUser(login);
+                    } else {
+                        tokensUserDAO.createToken(login);
+                    }
+
+                    controlValidated.createCookie(login, response);
+
+                    response.sendRedirect("/calendar");
+
+                } else {
+                    //ToDo Неправильно введен логин или пароль!https://www.tune-it.ru/web/marina/blog/-/blogs/16582509
                 }
-
-                tokensUserDAO.createToken(login);
-
-                Cookie cookieLogin = new Cookie("login", login);
-                Cookie cookieToken = new Cookie("token", tokensUserDAO.findToken(login).getUuid());
-                cookieLogin.setMaxAge(24 * 60 * 60);
-                cookieToken.setMaxAge(24 * 60 * 60);
-                response.addCookie(cookieLogin);
-                response.addCookie(cookieToken);
-
-                response.sendRedirect("/calendar");
-
-            } else {
-                //ToDo Неправильно введен логин или пароль!
             }
+        } else {
+            //ToDo CSRF-атака, обработайте ошибку
         }
-
         templateEngine.process("signform", ctx, writer);
     }
 
     private String generateCSRFToken() {
         return UUID.randomUUID().toString();
-
-        //ToDo Создать БД Куки+CSRFToken -> в БД хранить название куки и токен -> куки отдать в форму -> после получения ответа формы сверить токен по имени Куки
-        //ToDo сделать отдельный метод для проверок токенов -> Тру Фолс на продолжение работы
     }
 
 }

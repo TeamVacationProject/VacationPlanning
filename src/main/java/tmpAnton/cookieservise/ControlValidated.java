@@ -62,6 +62,15 @@ public class ControlValidated {
         UserRole userRole = user.getRegisteredUsersBD().getUserRole();
         return userRole.toString().equals("MANAGER");
     }
+
+    public void createCookie(String login, HttpServletResponse response) {
+        Cookie cookieLogin = new Cookie("login", login);
+        Cookie cookieToken = new Cookie("token", tokensUserDAO.findToken(login).getUuid());
+        cookieLogin.setMaxAge(24 * 60 * 60);
+        cookieToken.setMaxAge(24 * 60 * 60);
+        response.addCookie(cookieLogin);
+        response.addCookie(cookieToken);
+    }
 }
 
 //ToDo сделать сервлет и кнопку для выхода из приложения и удаления куки
@@ -69,14 +78,8 @@ public class ControlValidated {
 //public class CloseTabServlet extends HttpServlet {
 //
 //    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        Cookie cookieLogin = new Cookie("login", "");
-//        Cookie cookieToken = new Cookie("token", "");
-//        cookieLogin.setMaxAge(0);
-//        cookieToken.setMaxAge(0);
-//        response.addCookie(cookieLogin);
-//        response.addCookie(cookieToken);
-//        response.setContentType("text/html");
-//        response.getWriter().println("<script>window.close();</script>");
+//            ControlValidated controlValidated = new ControlValidated();
+//            controlValidated.logoutUser(response)
 //    }
 //}
 

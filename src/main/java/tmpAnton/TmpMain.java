@@ -8,6 +8,7 @@ import tmpAnton.signinservise.RegisteredUsersBD;
 import tmpAnton.signinservise.RegisteredUsersDAO;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpCookie;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -20,7 +21,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class TmpMain {
-    public static void main(String[] args) throws NoSuchAlgorithmException {
+    public static void main(String[] args) throws NoSuchAlgorithmException, UnsupportedEncodingException {
 
         HashingBcrypt bcrypt = new HashingBcrypt();
         String password = "www";
@@ -52,7 +53,20 @@ public class TmpMain {
 //        tokensUserDAO.findTokenByID("43");
         TokensUserBD vv = tokensUserDAO.findToken("ii");
 
-        System.out.println(vv.getLogin());
+//        System.out.println(vv.getLogin());
+
+
+        String saltable = UUID.randomUUID().toString();
+
+        byte[] bytesOfMessage = saltable.getBytes("UTF-8");
+
+        MessageDigest md = MessageDigest.getInstance("MD5");
+        byte[] theMD5digest = md.digest(bytesOfMessage);
+
+
+
+
+
 
 
 //        LocalDateTime dateTimeExpiresAt = LocalDateTime.now();
