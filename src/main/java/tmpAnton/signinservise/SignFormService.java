@@ -2,6 +2,7 @@ package tmpAnton.signinservise;
 
 import com.organisation.vacationplanning.services.IVacationController;
 import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.thymeleaf.ITemplateEngine;
 import org.thymeleaf.context.WebContext;
@@ -10,6 +11,8 @@ import tmpAnton.HashingBcrypt;
 import tmpAnton.cookieservise.ControlValidated;
 import tmpAnton.cookieservise.TokensUserBD;
 import tmpAnton.cookieservise.TokensUserDAO;
+import net.tanesha.recaptcha.ReCaptchaImpl;
+import net.tanesha.recaptcha.ReCaptchaResponse;
 
 import java.io.IOException;
 import java.io.Writer;
@@ -46,11 +49,26 @@ public class SignFormService implements IVacationController {
 
     private void handlePost(IWebExchange webExchange, ITemplateEngine templateEngine, Writer writer, HttpServletResponse response) throws IOException {
 
+        String storedToken = (String) webExchange.getSession().getAttributeValue("csrfToken");
+        String requestToken = webExchange.getRequest().getParameterValue("csrfToken");
+        String userCaptcha = webExchange.getRequest().getParameterValue("g-recaptcha-response");
+
+        ReCaptchaImpl reCaptcha = new ReCaptchaImpl();
+        String secret = "6LeX3b4nAAAAAMCrRZnvH9UmMW0VIBO5J0TjmD7l";
+        String key = "6LeX3b4nAAAAABd_BowZZnF2J0RnmWcpSjcXAyrF";
+        reCaptcha.setPrivateKey(secret);
+        ReCaptchaResponse reCaptchaResponse = reCaptcha.checkAnswer("ip_user", key, userCaptcha);
+
+        if (reCaptchaResponse.isValid()) {
+            System.out.println();
+        } else {
+            System.out.println();
+        }
+
+
         String login = webExchange.getRequest().getParameterValue("login");
         String email = webExchange.getRequest().getParameterValue("email");
 
-        String storedToken = (String) webExchange.getSession().getAttributeValue("csrfToken");
-        String requestToken = webExchange.getRequest().getParameterValue("csrfToken");
 
         //ToDo добавить капчу https://www.tune-it.ru/web/marina/blog/-/blogs/16582509
 
@@ -63,8 +81,6 @@ public class SignFormService implements IVacationController {
                 //ToDo ПРОВЕРИТЬ СООТВЕТСТВИЕ ПОЛЕЙ КЛАССА И БД!!!!!!!!!!!!!!!!!!!!!
                 RegisteredUsersBD user = usersDAO.findUser(login, webExchange.getRequest().getParameterValue("password"));
                 if (user != null) {
-
-                    String d = "";
 
                     if (!(user.getTokensUserBD().getUuid() == null)) {
                         tokensUserDAO.updateTokenUser(login);

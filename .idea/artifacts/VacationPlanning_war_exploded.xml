@@ -1,6 +1,13 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="VacationPlanning:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded</output-path>
+    <output-path>$PROJECT_DIR$/target/VacationPlanning-1.0-SNAPSHOT</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>VacationPlanning</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -36,7 +43,11 @@
           <element id="library" level="project" name="Maven: org.unbescape:unbescape:1.1.6.RELEASE" />
           <element id="library" level="project" name="Maven: at.favre.lib:bcrypt:0.10.2" />
           <element id="library" level="project" name="Maven: at.favre.lib:bytes:1.5.0" />
+          <element id="library" level="project" name="Maven: net.tanesha.recaptcha4j:recaptcha4j:0.0.8" />
         </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/VacationPlanning-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="VacationPlanning/web/Web" />
     </root>

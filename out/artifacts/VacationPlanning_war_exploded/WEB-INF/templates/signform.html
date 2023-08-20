@@ -4,8 +4,44 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <title>Регистрация</title>
     <link rel="stylesheet" type="text/css" media="all" th:href="@{css/signform.css}">
+    <title>reCAPTCHA: Simple page</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body onload="signform()">
+
+<!--<form action="/signform" method="post">-->
+<!--    <div class="form-styling-input-all">-->
+<!--        <input class="form-styling-all" maxlength="40" type="text" name="UserLogin" placeholder="Логин" required  />-->
+<!--    </div>-->
+<!--    <br>-->
+<!--    <div class="form-styling-input-all">-->
+<!--        <input class="form-styling-all" maxlength="40" type="password" name="UserPassword" placeholder="Пароль" required   />-->
+<!--        <input type="hidden" name="csrfToken" th:id="csrfToken" th:value="${csrfToken}" />-->
+<!--    </div>-->
+
+<!--    <input type="hidden" name="user-login-event" value="nya">-->
+<!--    <input hidden id="browser-time" value="" name="UserTime" >-->
+<!--    </div>-->
+<!--    &lt;!&ndash; Капча &ndash;&gt;-->
+<!--    <div class="captcha">-->
+<!--        <div class="captcha__image-reload">-->
+<!--            <img class="captcha__image" src="/ElementsOfSite/kapcha/captcha.php" width="132" alt="captcha">-->
+
+<!--            <button type="button" class="captcha__refresh"></button>-->
+<!--        </div>-->
+<!--        <div class="captcha__group">-->
+<!--            <div class="form-styling-input-all">-->
+<!--                <input class="form-styling-all" placeholder="Символы с изображения" type="text" name="captcha" id="captcha" autocomplete="off" required>-->
+<!--            </div>-->
+<!--            <div class="invalid-feedback"></div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    &lt;!&ndash; Кнопка "Отправить" &ndash;&gt;-->
+<!--    <div class="form-styling-input-all">-->
+<!--        &lt;!&ndash; <div id='loading' style="visibility: hidden;"><img src='../../IMG/pic/loading-11.gif' width='40' height='20'> </div>  &ndash;&gt;-->
+<!--        <input class="form-styling-all" type="submit" value="Войти" name="form-user-login" />-->
+<!--    </div>-->
+<!--</form>-->
 
     <!-- Sign Up -->
         <form action="/signform" method="post">
@@ -26,7 +62,18 @@
             <input type="password" name="password" placeholder="Password" class="input" />
             <a href="#" class="link">Забыли пароль?</a>
             <button type="submit" name="submit" value="Submit">Войти</button>
+
+            <div class="g-recaptcha" data-sitekey="6LeX3b4nAAAAABd_BowZZnF2J0RnmWcpSjcXAyrF"></div>
+            <br/>
+            <input type="submit" value="Submit">
         </form>
+
+<!--<form action="/signform" method="post">-->
+<!--    <div class="g-recaptcha" data-sitekey="6LeX3b4nAAAAABd_BowZZnF2J0RnmWcpSjcXAyrF"></div>-->
+<!--    <br/>-->
+<!--    <input type="submit" value="Submit">-->
+<!--</form>-->
 
 </body>
 </html>
+

@@ -23,12 +23,14 @@ import java.util.UUID;
 public class TmpMain {
     public static void main(String[] args) throws NoSuchAlgorithmException, UnsupportedEncodingException {
 
-        HashingBcrypt bcrypt = new HashingBcrypt();
-        String password = "www";
-        byte[] salt = BCrypt.with(new SecureRandom()).hash(6, password.getBytes(StandardCharsets.UTF_8));
-        String pass = bcrypt.getHashPassword("www");
 
-        BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), pass);
+
+//        HashingBcrypt bcrypt = new HashingBcrypt();
+//        String password = "www";
+//        byte[] salt = BCrypt.with(new SecureRandom()).hash(6, password.getBytes(StandardCharsets.UTF_8));
+//        String pass = bcrypt.getHashPassword("www");
+//
+//        BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), pass);
 
 //        Cookie cookie = new Cookie("v", "123");
 
@@ -54,19 +56,6 @@ public class TmpMain {
         TokensUserBD vv = tokensUserDAO.findToken("ii");
 
 //        System.out.println(vv.getLogin());
-
-
-        String saltable = UUID.randomUUID().toString();
-
-        byte[] bytesOfMessage = saltable.getBytes("UTF-8");
-
-        MessageDigest md = MessageDigest.getInstance("MD5");
-        byte[] theMD5digest = md.digest(bytesOfMessage);
-
-
-
-
-
 
 
 //        LocalDateTime dateTimeExpiresAt = LocalDateTime.now();
