@@ -10,11 +10,99 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="123e30c5-7440-4f3c-9098-b82cc208158d" name="Changes" comment="Insertion Thymeleaf">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/test.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/28961fb4-7215-4e88-9444-2325cfa4cc55.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/28961fb4-7215-4e88-9444-2325cfa4cc55.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3e99926c-82db-4fe7-8489-c7727648f0e8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3e99926c-82db-4fe7-8489-c7727648f0e8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/VacationPlanning_war.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/VacationPlanning_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/28961fb4-7215-4e88-9444-2325cfa4cc55.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3e99926c-82db-4fe7-8489-c7727648f0e8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/MainFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/controllers/Authentication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/controllers/ControllerMappings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/dao/IDepartmentSettings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/dao/IEmployeesSettings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/database/HibernateUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/database/entities/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/database/entities/Employee_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/listeners/StartWebApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/services/IVacationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/services/MainWorkspace.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/services/auth/AuthService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/services/calendar/CalendarService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/services/calendar/Day.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/services/calendar/HolidayDataFetcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/services/department/DepartmentSettings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/services/department/VacationsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/services/workspace/WorkspaceService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/testingdata/TestData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/utility/NotifTypes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/com/organisation/vacationplanning/utility/Notifier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/hibernate.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/HashingBcrypt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/TmpCookiesSessionBD.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/TmpCookiesSessionBD_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/TmpEmployeePassBD.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/TmpEmployeePassBD_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/TmpEmployeePassDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/TmpMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/TmpPasswordHashing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/TmpServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/cookieservise/ControlValidated.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/cookieservise/TokensUserBD.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/cookieservise/TokensUserBD_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/cookieservise/TokensUserDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/signinservise/RegisteredUsersBD.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/signinservise/RegisteredUsersBD_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/signinservise/RegisteredUsersDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/signinservise/SignFormService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/signinservise/UserAvailable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/classes/tmpAnton/signinservise/UserRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/HikariCP-5.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/antlr4-runtime-4.10.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/attoparser-2.0.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/bcrypt-0.10.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/byte-buddy-1.12.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/bytes-1.5.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/classmate-1.5.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/hibernate-commons-annotations-6.0.6.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/hibernate-community-dialects-6.1.7.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/hibernate-core-6.1.7.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/hibernate-hikaricp-6.1.7.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/hibernate-jpamodelgen-jakarta-5.6.15.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/istack-commons-runtime-4.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/jakarta.activation-2.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/jakarta.inject-api-2.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/jakarta.persistence-api-3.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/jakarta.transaction-api-2.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/jakarta.xml.bind-api-3.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/jandex-2.4.2.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/javassist-3.29.0-GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/jaxb-core-3.0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/jaxb-runtime-3.0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/jboss-logging-3.4.3.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/ognl-3.3.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/slf4j-api-2.0.0-alpha1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/sqlite-jdbc-3.42.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/thymeleaf-3.1.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/txw2-3.0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/lib/unbescape-1.1.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/templates/available.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/templates/calendar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/templates/footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/templates/notifier.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/templates/settings.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/templates/signform.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/templates/unavailable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/VacationPlanning_war_exploded/css/settings.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tmpAnton/signinservise/SignFormService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tmpAnton/signinservise/SignFormService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/signform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/signform.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
@@ -104,6 +192,7 @@
     </configuration>
     <configuration name="Tomcat 10.1.11" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.11" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/signform" />
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="VacationPlanning:war exploded">
           <settings>
@@ -288,7 +377,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/tmpAnton/signinservise/SignFormService.java</url>
-          <line>90</line>
+          <line>96</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
