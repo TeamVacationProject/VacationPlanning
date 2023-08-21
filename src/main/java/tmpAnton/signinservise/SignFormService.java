@@ -43,14 +43,15 @@ public class SignFormService implements IVacationController {
 
         if (webExchange.getRequest().getMethod().equals("GET")) {
 
-            GCage gCage = new GCage();
+//            GCage gCage = new GCage();
+//
+//            String token = gCage.getTokenGenerator().next();
+//
+//            webExchange.getSession().setAttributeValue("captcha", token);
+//            response.setContentType("image/"+gCage.getFormat());
+//            response.setHeader("Cache-Control", "no-store");
+//            gCage.draw(token, response.getOutputStream());
 
-            String token = gCage.getTokenGenerator().next();
-
-            webExchange.getSession().setAttributeValue("captcha", token);
-            response.setContentType("image/"+gCage.getFormat());
-            response.setHeader("Cache-Control", "no-store");
-            gCage.draw(token, response.getOutputStream());
 
 //            String captcha = generateCaptcha(5);
 //            BufferedImage newImage = generateCaptchaImage(captcha);
@@ -108,7 +109,7 @@ public class SignFormService implements IVacationController {
 
         } else if (webExchange.getRequest().getMethod().equals("POST")) {
 
-            handlePost(webExchange, templateEngine, writer, response);//ToDo метод может только так называться?
+            handlePost(webExchange, templateEngine, writer, response);
         }
 
     }
@@ -118,21 +119,20 @@ public class SignFormService implements IVacationController {
         String storedToken = (String) webExchange.getSession().getAttributeValue("csrfToken");
         String requestToken = webExchange.getRequest().getParameterValue("csrfToken");
 
-
-
         String login = webExchange.getRequest().getParameterValue("login");
         String email = webExchange.getRequest().getParameterValue("email");
-
 
         //ToDo добавить капчу https://www.tune-it.ru/web/marina/blog/-/blogs/16582509
 
         if (storedToken != null && storedToken.equals(requestToken) && requestToken.equals(csrfToken)) {
-            //ToDo проверка на корректность ввода
             if (email != null) {
                 String hashPassword = bcrypt.getHashPassword(webExchange.getRequest().getParameterValue("password"));
-                usersDAO.createUser(login, email, hashPassword);
+                try {
+                    usersDAO.createUser(login, email, hashPassword);
+                } catch (Exception e) {
+                    //ToDo Некорректный ввод логина или емайла
+                }
             } else if (login != null) {
-                //ToDo ПРОВЕРИТЬ СООТВЕТСТВИЕ ПОЛЕЙ КЛАССА И БД!!!!!!!!!!!!!!!!!!!!!
                 RegisteredUsersBD user = usersDAO.findUser(login, webExchange.getRequest().getParameterValue("password"));
                 if (user != null) {
 
@@ -147,7 +147,7 @@ public class SignFormService implements IVacationController {
                     response.sendRedirect("/calendar");
 
                 } else {
-                    //ToDo Неправильно введен логин или пароль!https://www.tune-it.ru/web/marina/blog/-/blogs/16582509
+                    //ToDo Неправильно введен логин или пароль!
                 }
             }
         } else {

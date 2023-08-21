@@ -2,6 +2,9 @@ package tmpAnton.signinservise;
 
 import com.organisation.vacationplanning.database.entities.Employee;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import tmpAnton.cookieservise.TokensUserBD;
 
 import java.io.Serializable;
@@ -14,12 +17,14 @@ public class RegisteredUsersBD implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
+    @NotEmpty
     @Column(name = "login", unique = true)
     private String login;
     @Column(name = "hash_password")
     private String hash_password;
+    @Email
     @Column(name = "email")
-    private String email; //ToDo поставить аннотацию Email
+    private String email;
     @Column(name = "userRole")
     @Enumerated(EnumType.STRING)
     private UserRole userRole;
@@ -29,10 +34,10 @@ public class RegisteredUsersBD implements Serializable {
     @OneToOne(mappedBy = "registeredUsersBD", cascade = CascadeType.ALL)
     private Employee employee;
 
-    public RegisteredUsersBD(String login, String hash_password, String email) {
+    public RegisteredUsersBD(String login, String email, String hash_password) {
         this.login = login;
-        this.hash_password = hash_password;
         this.email = email;
+        this.hash_password = hash_password;
         userRole = UserRole.USER;
     }
 

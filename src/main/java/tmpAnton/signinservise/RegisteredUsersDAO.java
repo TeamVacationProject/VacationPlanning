@@ -51,7 +51,7 @@ public class RegisteredUsersDAO {
             session.flush();
             tx.commit();
         }
-        if (bcrypt.checkPassword(password, user.getEmail())) {
+        if (bcrypt.checkPassword(password, user.getHash_password())) {
             return user;
         } else {
             return null;

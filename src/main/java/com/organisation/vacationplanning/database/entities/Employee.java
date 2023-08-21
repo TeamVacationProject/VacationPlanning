@@ -1,6 +1,8 @@
 package com.organisation.vacationplanning.database.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import tmpAnton.signinservise.RegisteredUsersBD;
 import tmpAnton.signinservise.UserRole;
 

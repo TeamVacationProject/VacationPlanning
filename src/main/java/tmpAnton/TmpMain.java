@@ -1,7 +1,11 @@
 package tmpAnton;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
+import com.organisation.vacationplanning.database.HibernateUtil;
+import com.organisation.vacationplanning.database.entities.Employee;
 import jakarta.servlet.http.Cookie;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 import tmpAnton.cookieservise.TokensUserBD;
 import tmpAnton.cookieservise.TokensUserDAO;
 import tmpAnton.signinservise.RegisteredUsersBD;
@@ -24,7 +28,6 @@ public class TmpMain {
     public static void main(String[] args) throws NoSuchAlgorithmException, UnsupportedEncodingException {
 
 
-
 //        HashingBcrypt bcrypt = new HashingBcrypt();
 //        String password = "www";
 //        byte[] salt = BCrypt.with(new SecureRandom()).hash(6, password.getBytes(StandardCharsets.UTF_8));
@@ -36,15 +39,15 @@ public class TmpMain {
 
 //        System.out.println(result);
 
-        String token = UUID.randomUUID().toString();
+//        String token = UUID.randomUUID().toString();
 
 //        System.out.println(LocalDateTime.now().plusMinutes(15));
 //        System.out.println(bcrypt.checkPassword(pass, pass));
 
-        TokensUserDAO tokensUserDAO = new TokensUserDAO();
+//        TokensUserDAO tokensUserDAO = new TokensUserDAO();
 //        TokensUserBD ww = tokensUserDAO.findToken("ww");
 //        TokensUserBD ww = tokensUserDAO.findTokenByID("1");
-        LocalDateTime now = LocalDateTime.now();
+//        LocalDateTime now = LocalDateTime.now();
 //        System.out.println(ww.getLogin());
 //        tokensUserDAO.deleteToken("ww");
 //        RegisteredUsersDAO registeredUsersDAO = new RegisteredUsersDAO();
@@ -53,7 +56,7 @@ public class TmpMain {
 //        System.out.println(uuid);
 
 //        tokensUserDAO.findTokenByID("43");
-        TokensUserBD vv = tokensUserDAO.findToken("ii");
+//        TokensUserBD vv = tokensUserDAO.findToken("ii");
 
 //        System.out.println(vv.getLogin());
 

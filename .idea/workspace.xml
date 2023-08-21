@@ -10,12 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="123e30c5-7440-4f3c-9098-b82cc208158d" name="Changes" comment="Insertion Thymeleaf">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tmpAnton/cookieservise/LogoutUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/VacationPlanning_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/VacationPlanning_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/controllers/ControllerMappings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/controllers/ControllerMappings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/database/entities/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/organisation/vacationplanning/database/entities/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tmpAnton/TmpMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tmpAnton/TmpMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tmpAnton/cookieservise/ControlValidated.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tmpAnton/cookieservise/ControlValidated.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tmpAnton/signinservise/RegisteredUsersBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tmpAnton/signinservise/RegisteredUsersBD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tmpAnton/signinservise/RegisteredUsersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tmpAnton/signinservise/RegisteredUsersDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tmpAnton/signinservise/SignFormService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tmpAnton/signinservise/SignFormService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/signform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/signform.html" afterDir="false" />
     </list>
@@ -230,7 +234,7 @@
       <workItem from="1692292311517" duration="8769000" />
       <workItem from="1692463825286" duration="1302000" />
       <workItem from="1692525108985" duration="5966000" />
-      <workItem from="1692633011017" duration="3192000" />
+      <workItem from="1692633011017" duration="9339000" />
     </task>
     <task id="LOCAL-00001" summary="Testing remote access">
       <created>1689699041186</created>
@@ -289,9 +293,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/tmpAnton/signinservise/SignFormService.java</url>
-          <line>117</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/main/java/tmpAnton/signinservise/RegisteredUsersDAO.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -73,13 +73,4 @@ public class ControlValidated {
     }
 }
 
-//ToDo сделать сервлет и кнопку для выхода из приложения и удаления куки
-//@WebServlet("/close")
-//public class CloseTabServlet extends HttpServlet {
-//
-//    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//            ControlValidated controlValidated = new ControlValidated();
-//            controlValidated.logoutUser(response)
-//    }
-//}
 
