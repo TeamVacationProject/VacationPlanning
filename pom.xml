@@ -88,6 +88,12 @@
             <artifactId>recaptcha4j</artifactId>
             <version>0.0.8</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.github.cage/cage -->
+        <dependency>
+            <groupId>com.github.cage</groupId>
+            <artifactId>cage</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 
     <build>

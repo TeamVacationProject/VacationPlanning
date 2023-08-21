@@ -44,6 +44,7 @@
           <element id="library" level="project" name="Maven: at.favre.lib:bcrypt:0.10.2" />
           <element id="library" level="project" name="Maven: at.favre.lib:bytes:1.5.0" />
           <element id="library" level="project" name="Maven: net.tanesha.recaptcha4j:recaptcha4j:0.0.8" />
+          <element id="library" level="project" name="Maven: com.github.cage:cage:1.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">
